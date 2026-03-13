@@ -1,0 +1,82 @@
+/* ===================== BUTTONS ===================== */
+.btn { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; padding: 14px 32px; border-radius: 0; transition: all 0.3s ease; cursor: pointer; }
+.btn-primary { background: var(--clr-dark); color: var(--clr-white); border: 1px solid var(--clr-dark); }
+.btn-primary:hover { background: #2C2C2C; }
+.btn-ghost { background: transparent; color: var(--clr-dark); border: 1px solid var(--clr-dark); }
+.btn-ghost:hover { background: var(--clr-dark); color: var(--clr-white); }
+.btn-ghost-light { background: transparent; color: var(--clr-white); border: 1px solid var(--clr-white); }
+.btn-ghost-light:hover { background: var(--clr-white); color: var(--clr-dark); }
+
+/* ===================== NAVBAR ===================== */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 72px;
+  display: flex; align-items: center;
+  background: transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+#navbar.scrolled {
+  background: var(--clr-bg);
+  border-bottom-color: var(--clr-border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 48px;
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.06em; color: var(--clr-white); transition: color 0.3s; }
+#navbar.scrolled .nav-logo { color: var(--clr-dark); }
+.nav-links { display: flex; gap: 40px; }
+.nav-links a { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clr-white); transition: color 0.3s; position: relative; padding-bottom: 4px; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--clr-gold); transition: width 0.3s ease; }
+.nav-links a:hover::after { width: 100%; }
+#navbar.scrolled .nav-links a { color: var(--clr-dark); }
+.nav-icons { display: flex; gap: 20px; align-items: center; }
+.nav-icons button { color: var(--clr-white); transition: color 0.3s; background: none; border: none; }
+#navbar.scrolled .nav-icons button { color: var(--clr-dark); }
+.nav-icons button:hover { color: var(--clr-gold); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-hamburger span { display: block; width: 24px; height: 1px; background: var(--clr-white); transition: background 0.3s; }
+#navbar.scrolled .nav-hamburger span { background: var(--clr-dark); }
+@media (max-width: 767px) {
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--clr-bg); padding: 24px 20px; gap: 20px; border-bottom: 1px solid var(--clr-border); }
+  .nav-links.open { display: flex; }
+  .nav-links a { color: var(--clr-dark); font-size: 13px; }
+  .nav-hamburger { display: flex; }
+  .nav-icons button { color: var(--clr-white); }
+  #navbar.scrolled .nav-icons button { color: var(--clr-dark); }
+}
+@media (max-width: 1023px) {
+  .nav-inner { padding: 0 24px; }
+}
+
+/* ===================== PRODUCT CARD ===================== */
+.product-card { background: var(--clr-white); cursor: pointer; }
+.product-card-img {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3/4; background: #F8F6F2;
+}
+.product-card-img img { transition: transform 0.4s ease; }
+.product-card:hover .product-card-img img { transform: scale(1.03); }
+.product-badge {
+  position: absolute; top: 16px; left: 16px;
+  font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em;
+}
+.badge-gold { color: var(--clr-gold); }
+.badge-moss { color: var(--clr-moss); }
+.badge-dark { color: var(--clr-dark); }
+.product-card-info { padding: 20px 4px; }
+.product-category { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; color: var(--clr-muted); margin-bottom: 8px; }
+.product-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px; color: var(--clr-dark); margin-bottom: 6px; line-height: 1.25; }
+.product-price { font-size: 14px; font-weight: 400; color: var(--clr-dark); margin-bottom: 16px; }
+.product-price span { font-weight: 300; font-size: 12px; color: var(--clr-muted); margin-right: 4px; }
+
+/* ===================== STICKY CART INDICATOR ===================== */
+.cart-badge {
+  position: absolute; top: -6px; right: -8px;
+  width: 16px; height: 16px; background: var(--clr-gold);
+  border-radius: 50%; font-size: 9px; font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--clr-dark);
+}
+.icon-wrap { position: relative; display: inline-flex; }
