@@ -1,670 +1,768 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oud Brasil — O Brasil tem seu próprio luxo.</title>
-  <meta name="description" content="Perfumaria de luxo: Árabes, Importados e exclusividades Só no Brasil. Descubra o Oud Brasil." />
+  <meta name="description"
+    content="Perfumaria de luxo: Árabes, Importados e exclusividades Só no Brasil. Descubra o Oud Brasil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
 </head>
+
 <body>
 
-<!-- SEÇÃO: NAVBAR -->
-<nav id="navbar" role="navigation" aria-label="Navegação principal">
-  <div class="nav-inner">
-    <!-- Logo -->
-    <a href="#" class="nav-logo" aria-label="Oud Brasil - Página inicial">Oud Brasil</a>
+  <!-- SEÇÃO: NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#" class="nav-logo" aria-label="Oud Brasil - Página inicial">Oud Brasil</a>
 
-    <!-- Links Centrais -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#arabes">Árabes</a></li>
-      <li><a href="#importados">Importados</a></li>
-      <li><a href="#sonobrasil">Só no Brasil</a></li>
-    </ul>
+      <!-- Links Centrais -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#arabes">Árabes</a></li>
+        <li><a href="#importados">Importados</a></li>
+        <li><a href="#sonobrasil">Só no Brasil</a></li>
+      </ul>
 
-    <!-- Ícones -->
-    <div class="nav-icons">
-      <button aria-label="Buscar" id="search-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </button>
-      <button aria-label="Favoritos" id="favorites-icon">
-        <span class="icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          <span class="favorites-badge" id="favorites-badge">0</span>
-        </span>
-      </button>
-      <button aria-label="Carrinho" id="cart-icon">
-        <span class="icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-badge" id="cart-badge">0</span>
-        </span>
-      </button>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<!-- SEÇÃO: HERO -->
-<section id="hero" aria-label="Banner principal">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Coleção 2025</p>
-    <h1 class="hero-title t-editorial">O Oriente encontra o Brasil.</h1>
-    <p class="hero-sub">Fragrâncias que transcendem fronteiras. Ouds raros, importados exclusivos e a alma brasileira destilada em cada gota.</p>
-    <div class="hero-cta">
-      <a href="#arabes" class="btn btn-primary">Explorar coleção</a>
-      <a href="#valor" class="btn btn-ghost-light">Nossa história</a>
-    </div>
-  </div>
-</section>
-
-<!-- SEÇÃO: FAMÍLIAS OLFATIVAS -->
-<section id="familias" aria-label="Famílias olfativas">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Descubra por notas</p>
-      <h2 class="t-h2">Famílias Olfativas</h2>
-    </div>
-    <div class="familias-grid">
-
-      <!-- Amadeirados -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><path d="M20 4 C20 4 8 14 8 24 a12 12 0 0 0 24 0 C32 14 20 4 20 4z"/><line x1="20" y1="28" x2="20" y2="36"/></svg>
-        </div>
-        <span class="familia-label">Amadeirados</span>
-      </div>
-
-      <!-- Cítricos -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><path d="M20 7 v26 M7 20 h26"/><path d="M11 11 l18 18 M29 11 l-18 18"/></svg>
-        </div>
-        <span class="familia-label">Cítricos</span>
-      </div>
-
-      <!-- Florais -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="4"/><ellipse cx="20" cy="10" rx="4" ry="7"/><ellipse cx="20" cy="30" rx="4" ry="7"/><ellipse cx="10" cy="20" rx="7" ry="4"/><ellipse cx="30" cy="20" rx="7" ry="4"/></svg>
-        </div>
-        <span class="familia-label">Florais</span>
-      </div>
-
-      <!-- Orientais -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><polygon points="20,4 24,15 36,15 26,23 30,35 20,27 10,35 14,23 4,15 16,15"/></svg>
-        </div>
-        <span class="familia-label">Orientais</span>
-      </div>
-
-      <!-- Frescos -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><path d="M8 28 Q14 18 20 22 Q26 26 32 12"/><path d="M6 34 Q13 22 20 28 Q27 34 34 20" opacity="0.5"/></svg>
-        </div>
-        <span class="familia-label">Frescos</span>
-      </div>
-
-      <!-- Gourmand -->
-      <div class="familia-card reveal">
-        <div class="familia-icon">
-          <svg viewBox="0 0 40 40"><path d="M12 32 Q12 20 20 20 Q28 20 28 32 Z"/><path d="M16 20 Q16 12 20 10 Q24 12 24 20"/><circle cx="20" cy="10" r="2.5"/></svg>
-        </div>
-        <span class="familia-label">Gourmand</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- SEÇÃO: DESTAQUES ÁRABES -->
-<section id="arabes" class="produtos-section" aria-label="Coleção Árabe">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Autenticidade do Oriente Médio</p>
-      <h2 class="t-h2">Coleção Árabe</h2>
-      <p class="section-desc">Ouds raros, bakhoor artesanal e attars de autor — a essência milenar do Oriente reimaginada para o Brasil.</p>
-    </div>
-    <p class="arabes-intro">O oud é a matéria-prima mais valiosa da perfumaria oriental. Extraído do cerne de árvores Aquilaria infectadas por um fungo raro, seu óleo pode custar mais que ouro. Bakhoor são pastilhas aromáticas queimadas em braseiros para perfumar ambientes. Attar é a essência pura, sem álcool, extraída por destilação a vapor — uma tradição de mais de mil anos.</p>
-
-    <div class="categoria-tabs" id="arabes-tabs">
-      <button class="categoria-tab active" data-tab="todos">Todos</button>
-      <button class="categoria-tab" data-tab="ouds">Ouds</button>
-      <button class="categoria-tab" data-tab="attars">Attars</button>
-      <button class="categoria-tab" data-tab="bakhoor">Bakhoor</button>
-      <button class="categoria-tab" data-tab="oleos">Perfumes em Óleo</button>
-    </div>
-
-    <div class="products-grid" id="arabes-grid">
-
-      <div class="product-card" data-categoria="ouds">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/royaloud/400/500" alt="Royal Oud" class="product-card-img" />
-          <button class="btn-favorite" data-id="royal-oud" data-name="Royal Oud" data-price="890" data-img="https://picsum.photos/seed/royaloud/400/500" aria-label="Favoritar Royal Oud">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Oud · Emirados Árabes</p>
-          <h3 class="product-card-name">Royal Oud</h3>
-          <p class="product-card-price">R$ 890,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="royal-oud">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="attars">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/attar/400/500" alt="Attar Al Ward" class="product-card-img" />
-          <button class="btn-favorite" data-id="attar-al-ward" data-name="Attar Al Ward" data-price="650" data-img="https://picsum.photos/seed/attar/400/500" aria-label="Favoritar Attar Al Ward">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Attar · Arábia Saudita</p>
-          <h3 class="product-card-name">Attar Al Ward</h3>
-          <p class="product-card-price">R$ 650,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="attar-al-ward">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="bakhoor">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/bakhoor/400/500" alt="Bakhoor Sultani" class="product-card-img" />
-          <button class="btn-favorite" data-id="bakhoor-sultani" data-name="Bakhoor Sultani" data-price="420" data-img="https://picsum.photos/seed/bakhoor/400/500" aria-label="Favoritar Bakhoor Sultani">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Bakhoor · Omã</p>
-          <h3 class="product-card-name">Bakhoor Sultani</h3>
-          <p class="product-card-price">R$ 420,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-sultani">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="ouds">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/blackoud/400/500" alt="Black Oud" class="product-card-img" />
-          <button class="btn-favorite" data-id="black-oud" data-name="Black Oud" data-price="980" data-img="https://picsum.photos/seed/blackoud/400/500" aria-label="Favoritar Black Oud">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Oud · Emirados Árabes</p>
-          <h3 class="product-card-name">Black Oud</h3>
-          <p class="product-card-price">R$ 980,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="black-oud">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="oleos">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/oudoleo/400/500" alt="Oud em Óleo Puro" class="product-card-img" />
-          <button class="btn-favorite" data-id="oud-oleo-puro" data-name="Oud em Óleo Puro" data-price="1200" data-img="https://picsum.photos/seed/oudoleo/400/500" aria-label="Favoritar Oud em Óleo Puro">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Óleo Puro · Camboja</p>
-          <h3 class="product-card-name">Oud em Óleo Puro</h3>
-          <p class="product-card-price">R$ 1.200,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="oud-oleo-puro">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="attars">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/attarmusk/400/500" alt="Attar Musk Al Tahara" class="product-card-img" />
-          <button class="btn-favorite" data-id="attar-musk" data-name="Attar Musk Al Tahara" data-price="480" data-img="https://picsum.photos/seed/attarmusk/400/500" aria-label="Favoritar Attar Musk Al Tahara">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Attar · Índia</p>
-          <h3 class="product-card-name">Attar Musk Al Tahara</h3>
-          <p class="product-card-price">R$ 480,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="attar-musk">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="ouds">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/oudrose/400/500" alt="Oud Rose" class="product-card-img" />
-          <button class="btn-favorite" data-id="oud-rose" data-name="Oud Rose" data-price="760" data-img="https://picsum.photos/seed/oudrose/400/500" aria-label="Favoritar Oud Rose">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Oud · Marrocos</p>
-          <h3 class="product-card-name">Oud Rose</h3>
-          <p class="product-card-price">R$ 760,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="oud-rose">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-categoria="bakhoor">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/bakhooramber/400/500" alt="Bakhoor Amber Nights" class="product-card-img" />
-          <button class="btn-favorite" data-id="bakhoor-amber" data-name="Bakhoor Amber Nights" data-price="390" data-img="https://picsum.photos/seed/bakhooramber/400/500" aria-label="Favoritar Bakhoor Amber Nights">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Bakhoor · Arábia Saudita</p>
-          <h3 class="product-card-name">Bakhoor Amber Nights</h3>
-          <p class="product-card-price">R$ 390,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-amber">Ver detalhes</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="section-cta-wrap">
-      <button class="btn btn-ghost">Ver toda a coleção árabe</button>
-    </div>
-  </div>
-</section>
-
-<!-- SEÇÃO: BANNER SÓ NO BRASIL -->
-<section id="sonobrasil" aria-label="Só no Brasil">
-  <div class="sonobrasil-bg"></div>
-  <div class="container">
-    <div class="sonobrasil-inner reveal">
-      <div class="sonobrasil-content">
-        <span class="sonobrasil-badge">Só no Brasil</span>
-        <h2 class="sonobrasil-title">Fragrâncias que só existem aqui.</h2>
-        <p class="sonobrasil-desc">Lançamentos mundiais com distribuição exclusiva no Brasil. Seja o primeiro a descobrir.</p>
-        <a href="#" class="btn btn-ghost-light">Ver lançamentos</a>
-      </div>
-      <div class="sonobrasil-img">
-        <img src="https://picsum.photos/seed/sonobrasil-prod/800/1000" alt="Perfume frasco natureza tropical" loading="lazy" />
+      <!-- Ícones -->
+      <div class="nav-icons">
+        <button aria-label="Buscar" id="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <button aria-label="Favoritos" id="favorites-icon">
+          <span class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <span class="favorites-badge" id="favorites-badge">0</span>
+          </span>
+        </button>
+        <button aria-label="Carrinho" id="cart-icon">
+          <span class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- SEÇÃO: IMPORTADOS -->
-<section id="importados" class="produtos-section alt-bg" aria-label="Importados">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Grife Internacional</p>
-      <h2 class="t-h2">Importados</h2>
-      <p class="section-desc">Criações das mais renomadas casas de perfumaria do mundo, chegando direto ao seu alcance.</p>
-    </div>
-    <p class="importados-intro">Trazemos as maiores casas de perfumaria do mundo até você. Cada frasco é importado diretamente de distribuidores oficiais, com autenticidade garantida e rastreabilidade de origem.</p>
-
-    <div class="importados-filtros">
-      <div class="filtros-grupo">
-        <span class="filtros-label">Marca</span>
-        <div class="filtros-opcoes" id="filtro-marca">
-          <button class="filtro-btn active" data-marca="todos">Todos</button>
-          <button class="filtro-btn" data-marca="mfk">Maison Francis Kurkdjian</button>
-          <button class="filtro-btn" data-marca="amouage">Amouage</button>
-          <button class="filtro-btn" data-marca="xerjoff">Xerjoff</button>
-          <button class="filtro-btn" data-marca="tomford">Tom Ford</button>
-        </div>
-      </div>
-      <div class="filtros-grupo">
-        <span class="filtros-label">Faixa de preço</span>
-        <div class="filtros-opcoes" id="filtro-preco">
-          <button class="filtro-btn active" data-preco="todos">Todos</button>
-          <button class="filtro-btn" data-preco="400-800">R$ 400 a R$ 800</button>
-          <button class="filtro-btn" data-preco="800-1200">R$ 800 a R$ 1.200</button>
-          <button class="filtro-btn" data-preco="1200+">R$ 1.200+</button>
-        </div>
+  <!-- SEÇÃO: HERO -->
+  <section id="hero" aria-label="Banner principal">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Coleção 2025</p>
+      <h1 class="hero-title t-editorial">O Oriente encontra o Brasil.</h1>
+      <p class="hero-sub">Fragrâncias que transcendem fronteiras. Ouds raros, importados exclusivos e a alma brasileira
+        destilada em cada gota.</p>
+      <div class="hero-cta">
+        <a href="#arabes" class="btn btn-primary">Explorar coleção</a>
+        <a href="#valor" class="btn btn-ghost-light">Nossa história</a>
       </div>
     </div>
+  </section>
 
-    <div class="products-grid" id="importados-grid">
-
-      <div class="product-card" data-marca="mfk" data-preco-val="980">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/baccarat/400/500" alt="Baccarat Rouge 540" class="product-card-img" />
-          <span class="product-badge-exclusive">Distribuição exclusiva</span>
-          <button class="btn-favorite" data-id="baccarat-rouge" data-name="Baccarat Rouge 540" data-price="980" data-img="https://picsum.photos/seed/baccarat/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
-          <h3 class="product-card-name">Baccarat Rouge 540</h3>
-          <p class="product-card-price">R$ 980,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="baccarat-rouge">Ver detalhes</button>
-        </div>
+  <!-- SEÇÃO: FAMÍLIAS OLFATIVAS -->
+  <section id="familias" aria-label="Famílias olfativas">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Descubra por notas</p>
+        <h2 class="t-h2">Famílias Olfativas</h2>
       </div>
+      <div class="familias-grid">
 
-      <div class="product-card" data-marca="amouage" data-preco-val="1350">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/interlude/400/500" alt="Interlude Man" class="product-card-img" />
-          <button class="btn-favorite" data-id="interlude-man" data-name="Interlude Man" data-price="1350" data-img="https://picsum.photos/seed/interlude/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Amouage · EDP</p>
-          <h3 class="product-card-name">Interlude Man</h3>
-          <p class="product-card-price">R$ 1.350,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="interlude-man">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="xerjoff" data-preco-val="1100">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/naxos/400/500" alt="Naxos" class="product-card-img" />
-          <button class="btn-favorite" data-id="naxos" data-name="Naxos" data-price="1100" data-img="https://picsum.photos/seed/naxos/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Xerjoff · EDP</p>
-          <h3 class="product-card-name">Naxos</h3>
-          <p class="product-card-price">R$ 1.100,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="naxos">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="tomford" data-preco-val="720">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/oudwood/400/500" alt="Oud Wood" class="product-card-img" />
-          <button class="btn-favorite" data-id="oud-wood-tf" data-name="Oud Wood" data-price="720" data-img="https://picsum.photos/seed/oudwood/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Tom Ford · EDP</p>
-          <h3 class="product-card-name">Oud Wood</h3>
-          <p class="product-card-price">R$ 720,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="oud-wood-tf">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="mfk" data-preco-val="860">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/grand/400/500" alt="Grand Soir" class="product-card-img" />
-          <button class="btn-favorite" data-id="grand-soir" data-name="Grand Soir" data-price="860" data-img="https://picsum.photos/seed/grand/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
-          <h3 class="product-card-name">Grand Soir</h3>
-          <p class="product-card-price">R$ 860,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="grand-soir">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="amouage" data-preco-val="1280">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/reflection/400/500" alt="Reflection Man" class="product-card-img" />
-          <button class="btn-favorite" data-id="reflection-man" data-name="Reflection Man" data-price="1280" data-img="https://picsum.photos/seed/reflection/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Amouage · EDP</p>
-          <h3 class="product-card-name">Reflection Man</h3>
-          <p class="product-card-price">R$ 1.280,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="reflection-man">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="xerjoff" data-preco-val="950">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/casamorati/400/500" alt="Italica" class="product-card-img" />
-          <button class="btn-favorite" data-id="italica" data-name="Italica" data-price="950" data-img="https://picsum.photos/seed/casamorati/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Xerjoff · EDP</p>
-          <h3 class="product-card-name">Italica</h3>
-          <p class="product-card-price">R$ 950,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="italica">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="tomford" data-preco-val="650">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/tobacco/400/500" alt="Tobacco Vanille" class="product-card-img" />
-          <button class="btn-favorite" data-id="tobacco-vanille" data-name="Tobacco Vanille" data-price="650" data-img="https://picsum.photos/seed/tobacco/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Tom Ford · EDP</p>
-          <h3 class="product-card-name">Tobacco Vanille</h3>
-          <p class="product-card-price">R$ 650,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="tobacco-vanille">Ver detalhes</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-marca="mfk" data-preco-val="1450">
-        <div class="product-card-img-wrap">
-          <img src="https://picsum.photos/seed/oud540/400/500" alt="Oud Satin Mood" class="product-card-img" />
-          <span class="product-badge-exclusive">Distribuição exclusiva</span>
-          <button class="btn-favorite" data-id="oud-satin-mood" data-name="Oud Satin Mood" data-price="1450" data-img="https://picsum.photos/seed/oud540/400/500" aria-label="Favoritar">&#9825;</button>
-        </div>
-        <div class="product-card-info">
-          <p class="product-card-category">Maison Francis Kurkdjian · Extrait</p>
-          <h3 class="product-card-name">Oud Satin Mood</h3>
-          <p class="product-card-price">R$ 1.450,00</p>
-          <button class="btn btn-primary product-card-cta" data-modal-id="oud-satin-mood">Ver detalhes</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="section-cta-wrap">
-      <button class="btn btn-ghost">Ver todos os importados</button>
-    </div>
-  </div>
-</section>
-
-<!-- SEÇÃO: PROPOSTA DE VALOR -->
-<section id="valor" aria-label="Por que escolher a Oud Brasil">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Por que escolher a Oud Brasil</p>
-      <h2 class="t-h2">Nossa Promessa</h2>
-    </div>
-    <div class="valor-grid">
-
-      <div class="valor-item reveal">
-        <div class="valor-icon">
-          <svg viewBox="0 0 56 56"><path d="M28 8 L44 16 L44 30 Q44 42 28 50 Q12 42 12 30 L12 16 Z"/><path d="M20 28 l6 6 10-10"/></svg>
-        </div>
-        <div class="gold-sep"></div>
-        <h3 class="valor-title">Frascos Originais e Lacrados</h3>
-        <p class="valor-desc">Garantia de autenticidade em cada produto. Trabalhamos diretamente com importadoras certificadas.</p>
-      </div>
-
-      <div class="valor-item reveal">
-        <div class="valor-icon">
-          <svg viewBox="0 0 56 56"><path d="M8 28 h40 M28 8 v40"/><rect x="14" y="14" width="28" height="28"/><path d="M20 8 v6 M36 8 v6 M8 20 h6 M42 20 h6"/></svg>
-        </div>
-        <div class="gold-sep"></div>
-        <h3 class="valor-title">Frete Grátis acima de R$ 299</h3>
-        <p class="valor-desc">Entregamos para todo o Brasil com rapidez e segurança. Pedidos acima de R$ 299 com frete gratuito.</p>
-      </div>
-
-      <div class="valor-item reveal">
-        <div class="valor-icon">
-          <svg viewBox="0 0 56 56"><circle cx="28" cy="20" r="10"/><path d="M12 48 Q12 36 28 36 Q44 36 44 48"/><path d="M38 14 l4 4"/><path d="M42 18 Q46 22 42 26 Q36 30 28 30"/></svg>
-        </div>
-        <div class="gold-sep"></div>
-        <h3 class="valor-title">Atendimento Especializado</h3>
-        <p class="valor-desc">Consultores especializados em perfumaria árabe e importada prontos para te orientar na escolha ideal.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SEÇÃO: FOOTER -->
-<footer id="footer" aria-label="Rodapé">
-  <div class="container">
-    <div class="footer-top">
-
-      <!-- Marca -->
-      <div>
-        <div class="footer-brand-logo">Oud Brasil</div>
-        <p class="footer-tagline">O Brasil tem seu próprio luxo.<br/>Perfumaria árabe, importada e exclusividades nacionais.</p>
-        <div class="footer-social">
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <!-- WhatsApp -->
-          <a href="#" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Coleções -->
-      <div class="footer-col">
-        <p class="footer-col-title">Coleções</p>
-        <ul>
-          <li><a href="#arabes">Árabes</a></li>
-          <li><a href="#importados">Importados</a></li>
-          <li><a href="#sonobrasil">Só no Brasil</a></li>
-        </ul>
-      </div>
-
-      <!-- Famílias -->
-      <div class="footer-col">
-        <p class="footer-col-title">Famílias</p>
-        <ul>
-          <li><a href="#">Amadeirados</a></li>
-          <li><a href="#">Cítricos</a></li>
-          <li><a href="#">Florais</a></li>
-          <li><a href="#">Orientais</a></li>
-          <li><a href="#">Frescos</a></li>
-          <li><a href="#">Gourmand</a></li>
-        </ul>
-      </div>
-
-      <!-- Institucional -->
-      <div class="footer-col">
-        <p class="footer-col-title">Institucional</p>
-        <ul>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Política de privacidade</a></li>
-          <li><a href="#">Trocas e devoluções</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Oud Brasil. Todos os direitos reservados.</span>
-      <span class="footer-copy">Feito com luxo no Brasil 🇧🇷</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Cart Drawer -->
-<div id="cart-drawer" class="cart-drawer" aria-hidden="true">
-  <div class="cart-drawer-header">
-    <span class="cart-drawer-title">Sua Sacola</span>
-    <button class="cart-drawer-close" id="cart-close" aria-label="Fechar carrinho">&times;</button>
-  </div>
-  <div class="cart-drawer-items" id="cart-items-list"></div>
-  <div class="cart-drawer-footer">
-    <div class="cart-subtotal">
-      <span>Subtotal</span>
-      <span id="cart-subtotal-value">R$ 0,00</span>
-    </div>
-    <p class="cart-shipping-notice">Frete grátis acima de R$ 299</p>
-    <button class="btn btn-primary cart-checkout-btn">Finalizar compra</button>
-  </div>
-</div>
-<div id="cart-backdrop" class="cart-backdrop"></div>
-
-<!-- Favorites Drawer -->
-<div id="favorites-drawer" class="favorites-drawer" aria-hidden="true">
-  <div class="favorites-drawer-header">
-    <span class="favorites-drawer-title">Lista de Desejos</span>
-    <button class="favorites-drawer-close" id="favorites-close" aria-label="Fechar favoritos">&times;</button>
-  </div>
-  <div class="favorites-drawer-items" id="favorites-items-list"></div>
-</div>
-<div id="favorites-backdrop" class="favorites-backdrop"></div>
-
-<!-- Search Overlay -->
-<div id="search-overlay" class="search-overlay" aria-hidden="true">
-  <button class="search-overlay-close" id="search-close" aria-label="Fechar busca">&times;</button>
-  <div class="search-overlay-inner">
-    <input type="text" id="search-input" class="search-input" placeholder="O que você procura?" autocomplete="off" />
-    <ul class="search-suggestions" id="search-suggestions"></ul>
-  </div>
-</div>
-
-<!-- Product Modal -->
-<div id="product-modal" class="product-modal" aria-hidden="true">
-  <div class="product-modal-overlay"></div>
-  <div class="product-modal-container">
-    <button class="product-modal-close" id="product-modal-close" aria-label="Fechar">&times;</button>
-    <div class="product-modal-grid">
-
-      <!-- Galeria -->
-      <div class="product-gallery">
-        <div class="product-gallery-main">
-          <img id="modal-img-main" src="" alt="" />
-        </div>
-        <div class="product-gallery-thumbs" id="modal-thumbs"></div>
-      </div>
-
-      <!-- Informações -->
-      <div class="product-info">
-        <p class="product-info-category" id="modal-category"></p>
-        <h2 class="product-info-name" id="modal-name"></h2>
-        <p class="product-info-origin" id="modal-origin"></p>
-        <p class="product-info-price" id="modal-price"></p>
-
-        <!-- Volumes -->
-        <div class="product-volume-selector">
-          <p class="product-volume-label">Volume</p>
-          <div class="product-volume-opts" id="modal-volumes"></div>
-        </div>
-
-        <!-- Pirâmide olfativa -->
-        <div class="olfative-pyramid">
-          <p class="olfative-pyramid-title">Pirâmide Olfativa</p>
-          <div class="pyramid-row">
-            <span class="pyramid-label">Topo</span>
-            <span class="pyramid-notes" id="modal-notes-top"></span>
+        <!-- Amadeirados -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <path d="M20 4 C20 4 8 14 8 24 a12 12 0 0 0 24 0 C32 14 20 4 20 4z" />
+              <line x1="20" y1="28" x2="20" y2="36" />
+            </svg>
           </div>
-          <div class="pyramid-row">
-            <span class="pyramid-label">Coração</span>
-            <span class="pyramid-notes" id="modal-notes-heart"></span>
+          <span class="familia-label">Amadeirados</span>
+        </div>
+
+        <!-- Cítricos -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="13" />
+              <path d="M20 7 v26 M7 20 h26" />
+              <path d="M11 11 l18 18 M29 11 l-18 18" />
+            </svg>
           </div>
-          <div class="pyramid-row">
-            <span class="pyramid-label">Base</span>
-            <span class="pyramid-notes" id="modal-notes-base"></span>
+          <span class="familia-label">Cítricos</span>
+        </div>
+
+        <!-- Florais -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="4" />
+              <ellipse cx="20" cy="10" rx="4" ry="7" />
+              <ellipse cx="20" cy="30" rx="4" ry="7" />
+              <ellipse cx="10" cy="20" rx="7" ry="4" />
+              <ellipse cx="30" cy="20" rx="7" ry="4" />
+            </svg>
+          </div>
+          <span class="familia-label">Florais</span>
+        </div>
+
+        <!-- Orientais -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <polygon points="20,4 24,15 36,15 26,23 30,35 20,27 10,35 14,23 4,15 16,15" />
+            </svg>
+          </div>
+          <span class="familia-label">Orientais</span>
+        </div>
+
+        <!-- Frescos -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <path d="M8 28 Q14 18 20 22 Q26 26 32 12" />
+              <path d="M6 34 Q13 22 20 28 Q27 34 34 20" opacity="0.5" />
+            </svg>
+          </div>
+          <span class="familia-label">Frescos</span>
+        </div>
+
+        <!-- Gourmand -->
+        <div class="familia-card reveal">
+          <div class="familia-icon">
+            <svg viewBox="0 0 40 40">
+              <path d="M12 32 Q12 20 20 20 Q28 20 28 32 Z" />
+              <path d="M16 20 Q16 12 20 10 Q24 12 24 20" />
+              <circle cx="20" cy="10" r="2.5" />
+            </svg>
+          </div>
+          <span class="familia-label">Gourmand</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SEÇÃO: DESTAQUES ÁRABES -->
+  <section id="arabes" class="produtos-section" aria-label="Coleção Árabe">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Autenticidade do Oriente Médio</p>
+        <h2 class="t-h2">Coleção Árabe</h2>
+        <p class="section-desc">Ouds raros, bakhoor artesanal e attars de autor — a essência milenar do Oriente
+          reimaginada para o Brasil.</p>
+      </div>
+      <p class="arabes-intro">O oud é a matéria-prima mais valiosa da perfumaria oriental. Extraído do cerne de árvores
+        Aquilaria infectadas por um fungo raro, seu óleo pode custar mais que ouro. Bakhoor são pastilhas aromáticas
+        queimadas em braseiros para perfumar ambientes. Attar é a essência pura, sem álcool, extraída por destilação a
+        vapor — uma tradição de mais de mil anos.</p>
+
+      <div class="categoria-tabs" id="arabes-tabs">
+        <button class="categoria-tab active" data-tab="todos">Todos</button>
+        <button class="categoria-tab" data-tab="ouds">Ouds</button>
+        <button class="categoria-tab" data-tab="attars">Attars</button>
+        <button class="categoria-tab" data-tab="bakhoor">Bakhoor</button>
+        <button class="categoria-tab" data-tab="oleos">Perfumes em Óleo</button>
+      </div>
+
+      <div class="products-grid" id="arabes-grid">
+
+        <div class="product-card" data-categoria="ouds">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/royaloud/400/500" alt="Royal Oud" class="product-card-img" />
+            <button class="btn-favorite" data-id="royal-oud" data-name="Royal Oud" data-price="890"
+              data-img="https://picsum.photos/seed/royaloud/400/500" aria-label="Favoritar Royal Oud">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Oud · Emirados Árabes</p>
+            <h3 class="product-card-name">Royal Oud</h3>
+            <p class="product-card-price">R$ 890,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="royal-oud">Ver detalhes</button>
           </div>
         </div>
 
-        <!-- Descrição -->
-        <p class="product-info-description" id="modal-description"></p>
-
-        <!-- CTAs -->
-        <div class="product-modal-ctas">
-          <button class="btn btn-primary product-modal-add-cart" id="modal-add-cart">Adicionar ao carrinho</button>
-          <button class="btn btn-ghost product-modal-add-favorite" id="modal-add-favorite">+ Lista de desejos</button>
+        <div class="product-card" data-categoria="attars">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/attar/400/500" alt="Attar Al Ward" class="product-card-img" />
+            <button class="btn-favorite" data-id="attar-al-ward" data-name="Attar Al Ward" data-price="650"
+              data-img="https://picsum.photos/seed/attar/400/500" aria-label="Favoritar Attar Al Ward">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Attar · Arábia Saudita</p>
+            <h3 class="product-card-name">Attar Al Ward</h3>
+            <p class="product-card-price">R$ 650,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="attar-al-ward">Ver detalhes</button>
+          </div>
         </div>
 
-        <!-- Accordion -->
-        <div class="product-accordion">
-          <div class="accordion-item">
-            <button class="accordion-trigger">Política de entrega</button>
-            <div class="accordion-content">
-              <p>Entregamos para todo o Brasil. Frete grátis acima de R$ 299. Prazo de 3 a 7 dias úteis para capitais e 5 a 12 dias úteis para demais regiões.</p>
+        <div class="product-card" data-categoria="bakhoor">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/bakhoor/400/500" alt="Bakhoor Sultani" class="product-card-img" />
+            <button class="btn-favorite" data-id="bakhoor-sultani" data-name="Bakhoor Sultani" data-price="420"
+              data-img="https://picsum.photos/seed/bakhoor/400/500"
+              aria-label="Favoritar Bakhoor Sultani">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Bakhoor · Omã</p>
+            <h3 class="product-card-name">Bakhoor Sultani</h3>
+            <p class="product-card-price">R$ 420,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-sultani">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-categoria="ouds">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/blackoud/400/500" alt="Black Oud" class="product-card-img" />
+            <button class="btn-favorite" data-id="black-oud" data-name="Black Oud" data-price="980"
+              data-img="https://picsum.photos/seed/blackoud/400/500" aria-label="Favoritar Black Oud">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Oud · Emirados Árabes</p>
+            <h3 class="product-card-name">Black Oud</h3>
+            <p class="product-card-price">R$ 980,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="black-oud">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-categoria="oleos">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/oudoleo/400/500" alt="Oud em Óleo Puro" class="product-card-img" />
+            <button class="btn-favorite" data-id="oud-oleo-puro" data-name="Oud em Óleo Puro" data-price="1200"
+              data-img="https://picsum.photos/seed/oudoleo/400/500"
+              aria-label="Favoritar Oud em Óleo Puro">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Óleo Puro · Camboja</p>
+            <h3 class="product-card-name">Oud em Óleo Puro</h3>
+            <p class="product-card-price">R$ 1.200,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="oud-oleo-puro">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-categoria="attars">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/attarmusk/400/500" alt="Attar Musk Al Tahara"
+              class="product-card-img" />
+            <button class="btn-favorite" data-id="attar-musk" data-name="Attar Musk Al Tahara" data-price="480"
+              data-img="https://picsum.photos/seed/attarmusk/400/500"
+              aria-label="Favoritar Attar Musk Al Tahara">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Attar · Índia</p>
+            <h3 class="product-card-name">Attar Musk Al Tahara</h3>
+            <p class="product-card-price">R$ 480,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="attar-musk">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-categoria="ouds">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/oudrose/400/500" alt="Oud Rose" class="product-card-img" />
+            <button class="btn-favorite" data-id="oud-rose" data-name="Oud Rose" data-price="760"
+              data-img="https://picsum.photos/seed/oudrose/400/500" aria-label="Favoritar Oud Rose">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Oud · Marrocos</p>
+            <h3 class="product-card-name">Oud Rose</h3>
+            <p class="product-card-price">R$ 760,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="oud-rose">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-categoria="bakhoor">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/bakhooramber/400/500" alt="Bakhoor Amber Nights"
+              class="product-card-img" />
+            <button class="btn-favorite" data-id="bakhoor-amber" data-name="Bakhoor Amber Nights" data-price="390"
+              data-img="https://picsum.photos/seed/bakhooramber/400/500"
+              aria-label="Favoritar Bakhoor Amber Nights">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Bakhoor · Arábia Saudita</p>
+            <h3 class="product-card-name">Bakhoor Amber Nights</h3>
+            <p class="product-card-price">R$ 390,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-amber">Ver detalhes</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-cta-wrap">
+        <button class="btn btn-ghost">Ver toda a coleção árabe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: BANNER SÓ NO BRASIL -->
+  <section id="sonobrasil" aria-label="Só no Brasil">
+    <div class="sonobrasil-bg"></div>
+    <div class="container">
+      <div class="sonobrasil-inner reveal">
+        <div class="sonobrasil-content">
+          <span class="sonobrasil-badge">Só no Brasil</span>
+          <h2 class="sonobrasil-title">Fragrâncias que só existem aqui.</h2>
+          <p class="sonobrasil-desc">Lançamentos mundiais com distribuição exclusiva no Brasil. Seja o primeiro a
+            descobrir.</p>
+          <a href="#" class="btn btn-ghost-light">Ver lançamentos</a>
+        </div>
+        <div class="sonobrasil-img">
+          <img src="assets\granado_caju.png" alt="Perfume frasco natureza tropical" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: IMPORTADOS -->
+  <section id="importados" class="produtos-section alt-bg" aria-label="Importados">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Grife Internacional</p>
+        <h2 class="t-h2">Importados</h2>
+        <p class="section-desc">Criações das mais renomadas casas de perfumaria do mundo, chegando direto ao seu
+          alcance.</p>
+      </div>
+      <p class="importados-intro">Trazemos as maiores casas de perfumaria do mundo até você. Cada frasco é importado
+        diretamente de distribuidores oficiais, com autenticidade garantida e rastreabilidade de origem.</p>
+
+      <div class="importados-filtros">
+        <div class="filtros-grupo">
+          <span class="filtros-label">Marca</span>
+          <div class="filtros-opcoes" id="filtro-marca">
+            <button class="filtro-btn active" data-marca="todos">Todos</button>
+            <button class="filtro-btn" data-marca="mfk">Maison Francis Kurkdjian</button>
+            <button class="filtro-btn" data-marca="amouage">Amouage</button>
+            <button class="filtro-btn" data-marca="xerjoff">Xerjoff</button>
+            <button class="filtro-btn" data-marca="tomford">Tom Ford</button>
+          </div>
+        </div>
+        <div class="filtros-grupo">
+          <span class="filtros-label">Faixa de preço</span>
+          <div class="filtros-opcoes" id="filtro-preco">
+            <button class="filtro-btn active" data-preco="todos">Todos</button>
+            <button class="filtro-btn" data-preco="400-800">R$ 400 a R$ 800</button>
+            <button class="filtro-btn" data-preco="800-1200">R$ 800 a R$ 1.200</button>
+            <button class="filtro-btn" data-preco="1200+">R$ 1.200+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="importados-grid">
+
+        <div class="product-card" data-marca="mfk" data-preco-val="980">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/baccarat/400/500" alt="Baccarat Rouge 540" class="product-card-img" />
+            <span class="product-badge-exclusive">Distribuição exclusiva</span>
+            <button class="btn-favorite" data-id="baccarat-rouge" data-name="Baccarat Rouge 540" data-price="980"
+              data-img="https://picsum.photos/seed/baccarat/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
+            <h3 class="product-card-name">Baccarat Rouge 540</h3>
+            <p class="product-card-price">R$ 980,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="baccarat-rouge">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="amouage" data-preco-val="1350">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/interlude/400/500" alt="Interlude Man" class="product-card-img" />
+            <button class="btn-favorite" data-id="interlude-man" data-name="Interlude Man" data-price="1350"
+              data-img="https://picsum.photos/seed/interlude/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Amouage · EDP</p>
+            <h3 class="product-card-name">Interlude Man</h3>
+            <p class="product-card-price">R$ 1.350,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="interlude-man">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="xerjoff" data-preco-val="1100">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/naxos/400/500" alt="Naxos" class="product-card-img" />
+            <button class="btn-favorite" data-id="naxos" data-name="Naxos" data-price="1100"
+              data-img="https://picsum.photos/seed/naxos/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Xerjoff · EDP</p>
+            <h3 class="product-card-name">Naxos</h3>
+            <p class="product-card-price">R$ 1.100,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="naxos">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="tomford" data-preco-val="720">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/oudwood/400/500" alt="Oud Wood" class="product-card-img" />
+            <button class="btn-favorite" data-id="oud-wood-tf" data-name="Oud Wood" data-price="720"
+              data-img="https://picsum.photos/seed/oudwood/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Tom Ford · EDP</p>
+            <h3 class="product-card-name">Oud Wood</h3>
+            <p class="product-card-price">R$ 720,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="oud-wood-tf">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="mfk" data-preco-val="860">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/grand/400/500" alt="Grand Soir" class="product-card-img" />
+            <button class="btn-favorite" data-id="grand-soir" data-name="Grand Soir" data-price="860"
+              data-img="https://picsum.photos/seed/grand/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
+            <h3 class="product-card-name">Grand Soir</h3>
+            <p class="product-card-price">R$ 860,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="grand-soir">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="amouage" data-preco-val="1280">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/reflection/400/500" alt="Reflection Man" class="product-card-img" />
+            <button class="btn-favorite" data-id="reflection-man" data-name="Reflection Man" data-price="1280"
+              data-img="https://picsum.photos/seed/reflection/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Amouage · EDP</p>
+            <h3 class="product-card-name">Reflection Man</h3>
+            <p class="product-card-price">R$ 1.280,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="reflection-man">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="xerjoff" data-preco-val="950">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/casamorati/400/500" alt="Italica" class="product-card-img" />
+            <button class="btn-favorite" data-id="italica" data-name="Italica" data-price="950"
+              data-img="https://picsum.photos/seed/casamorati/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Xerjoff · EDP</p>
+            <h3 class="product-card-name">Italica</h3>
+            <p class="product-card-price">R$ 950,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="italica">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="tomford" data-preco-val="650">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/tobacco/400/500" alt="Tobacco Vanille" class="product-card-img" />
+            <button class="btn-favorite" data-id="tobacco-vanille" data-name="Tobacco Vanille" data-price="650"
+              data-img="https://picsum.photos/seed/tobacco/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Tom Ford · EDP</p>
+            <h3 class="product-card-name">Tobacco Vanille</h3>
+            <p class="product-card-price">R$ 650,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="tobacco-vanille">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-marca="mfk" data-preco-val="1450">
+          <div class="product-card-img-wrap">
+            <img src="https://picsum.photos/seed/oud540/400/500" alt="Oud Satin Mood" class="product-card-img" />
+            <span class="product-badge-exclusive">Distribuição exclusiva</span>
+            <button class="btn-favorite" data-id="oud-satin-mood" data-name="Oud Satin Mood" data-price="1450"
+              data-img="https://picsum.photos/seed/oud540/400/500" aria-label="Favoritar">&#9825;</button>
+          </div>
+          <div class="product-card-info">
+            <p class="product-card-category">Maison Francis Kurkdjian · Extrait</p>
+            <h3 class="product-card-name">Oud Satin Mood</h3>
+            <p class="product-card-price">R$ 1.450,00</p>
+            <button class="btn btn-primary product-card-cta" data-modal-id="oud-satin-mood">Ver detalhes</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-cta-wrap">
+        <button class="btn btn-ghost">Ver todos os importados</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: PROPOSTA DE VALOR -->
+  <section id="valor" aria-label="Por que escolher a Oud Brasil">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Por que escolher a Oud Brasil</p>
+        <h2 class="t-h2">Nossa Promessa</h2>
+      </div>
+      <div class="valor-grid">
+
+        <div class="valor-item reveal">
+          <div class="valor-icon">
+            <svg viewBox="0 0 56 56">
+              <path d="M28 8 L44 16 L44 30 Q44 42 28 50 Q12 42 12 30 L12 16 Z" />
+              <path d="M20 28 l6 6 10-10" />
+            </svg>
+          </div>
+          <div class="gold-sep"></div>
+          <h3 class="valor-title">Frascos Originais e Lacrados</h3>
+          <p class="valor-desc">Garantia de autenticidade em cada produto. Trabalhamos diretamente com importadoras
+            certificadas.</p>
+        </div>
+
+        <div class="valor-item reveal">
+          <div class="valor-icon">
+            <svg viewBox="0 0 56 56">
+              <path d="M8 28 h40 M28 8 v40" />
+              <rect x="14" y="14" width="28" height="28" />
+              <path d="M20 8 v6 M36 8 v6 M8 20 h6 M42 20 h6" />
+            </svg>
+          </div>
+          <div class="gold-sep"></div>
+          <h3 class="valor-title">Frete Grátis acima de R$ 299</h3>
+          <p class="valor-desc">Entregamos para todo o Brasil com rapidez e segurança. Pedidos acima de R$ 299 com frete
+            gratuito.</p>
+        </div>
+
+        <div class="valor-item reveal">
+          <div class="valor-icon">
+            <svg viewBox="0 0 56 56">
+              <circle cx="28" cy="20" r="10" />
+              <path d="M12 48 Q12 36 28 36 Q44 36 44 48" />
+              <path d="M38 14 l4 4" />
+              <path d="M42 18 Q46 22 42 26 Q36 30 28 30" />
+            </svg>
+          </div>
+          <div class="gold-sep"></div>
+          <h3 class="valor-title">Atendimento Especializado</h3>
+          <p class="valor-desc">Consultores especializados em perfumaria árabe e importada prontos para te orientar na
+            escolha ideal.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: FOOTER -->
+  <footer id="footer" aria-label="Rodapé">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Marca -->
+        <div>
+          <div class="footer-brand-logo">Oud Brasil</div>
+          <p class="footer-tagline">O Brasil tem seu próprio luxo.<br />Perfumaria árabe, importada e exclusividades
+            nacionais.</p>
+          <div class="footer-social">
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="#" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coleções -->
+        <div class="footer-col">
+          <p class="footer-col-title">Coleções</p>
+          <ul>
+            <li><a href="#arabes">Árabes</a></li>
+            <li><a href="#importados">Importados</a></li>
+            <li><a href="#sonobrasil">Só no Brasil</a></li>
+          </ul>
+        </div>
+
+        <!-- Famílias -->
+        <div class="footer-col">
+          <p class="footer-col-title">Famílias</p>
+          <ul>
+            <li><a href="#">Amadeirados</a></li>
+            <li><a href="#">Cítricos</a></li>
+            <li><a href="#">Florais</a></li>
+            <li><a href="#">Orientais</a></li>
+            <li><a href="#">Frescos</a></li>
+            <li><a href="#">Gourmand</a></li>
+          </ul>
+        </div>
+
+        <!-- Institucional -->
+        <div class="footer-col">
+          <p class="footer-col-title">Institucional</p>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 Oud Brasil. Todos os direitos reservados.</span>
+        <span class="footer-copy">Feito com luxo no Brasil 🇧🇷</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <span class="cart-drawer-title">Sua Sacola</span>
+      <button class="cart-drawer-close" id="cart-close" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items-list"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-value">R$ 0,00</span>
+      </div>
+      <p class="cart-shipping-notice">Frete grátis acima de R$ 299</p>
+      <button class="btn btn-primary cart-checkout-btn">Finalizar compra</button>
+    </div>
+  </div>
+  <div id="cart-backdrop" class="cart-backdrop"></div>
+
+  <!-- Favorites Drawer -->
+  <div id="favorites-drawer" class="favorites-drawer" aria-hidden="true">
+    <div class="favorites-drawer-header">
+      <span class="favorites-drawer-title">Lista de Desejos</span>
+      <button class="favorites-drawer-close" id="favorites-close" aria-label="Fechar favoritos">&times;</button>
+    </div>
+    <div class="favorites-drawer-items" id="favorites-items-list"></div>
+  </div>
+  <div id="favorites-backdrop" class="favorites-backdrop"></div>
+
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <button class="search-overlay-close" id="search-close" aria-label="Fechar busca">&times;</button>
+    <div class="search-overlay-inner">
+      <input type="text" id="search-input" class="search-input" placeholder="O que você procura?" autocomplete="off" />
+      <ul class="search-suggestions" id="search-suggestions"></ul>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="product-modal" aria-hidden="true">
+    <div class="product-modal-overlay"></div>
+    <div class="product-modal-container">
+      <button class="product-modal-close" id="product-modal-close" aria-label="Fechar">&times;</button>
+      <div class="product-modal-grid">
+
+        <!-- Galeria -->
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img id="modal-img-main" src="" alt="" />
+          </div>
+          <div class="product-gallery-thumbs" id="modal-thumbs"></div>
+        </div>
+
+        <!-- Informações -->
+        <div class="product-info">
+          <p class="product-info-category" id="modal-category"></p>
+          <h2 class="product-info-name" id="modal-name"></h2>
+          <p class="product-info-origin" id="modal-origin"></p>
+          <p class="product-info-price" id="modal-price"></p>
+
+          <!-- Volumes -->
+          <div class="product-volume-selector">
+            <p class="product-volume-label">Volume</p>
+            <div class="product-volume-opts" id="modal-volumes"></div>
+          </div>
+
+          <!-- Pirâmide olfativa -->
+          <div class="olfative-pyramid">
+            <p class="olfative-pyramid-title">Pirâmide Olfativa</p>
+            <div class="pyramid-row">
+              <span class="pyramid-label">Topo</span>
+              <span class="pyramid-notes" id="modal-notes-top"></span>
+            </div>
+            <div class="pyramid-row">
+              <span class="pyramid-label">Coração</span>
+              <span class="pyramid-notes" id="modal-notes-heart"></span>
+            </div>
+            <div class="pyramid-row">
+              <span class="pyramid-label">Base</span>
+              <span class="pyramid-notes" id="modal-notes-base"></span>
             </div>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger">Trocas e devoluções</button>
-            <div class="accordion-content">
-              <p>Aceitamos trocas e devoluções em até 7 dias após o recebimento, desde que o produto esteja lacrado e sem uso.</p>
-            </div>
+
+          <!-- Descrição -->
+          <p class="product-info-description" id="modal-description"></p>
+
+          <!-- CTAs -->
+          <div class="product-modal-ctas">
+            <button class="btn btn-primary product-modal-add-cart" id="modal-add-cart">Adicionar ao carrinho</button>
+            <button class="btn btn-ghost product-modal-add-favorite" id="modal-add-favorite">+ Lista de desejos</button>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger">Autenticidade garantida</button>
-            <div class="accordion-content">
-              <p>Todos os produtos são 100% originais, importados diretamente das casas produtoras ou distribuidores oficiais.</p>
+
+          <!-- Accordion -->
+          <div class="product-accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger">Política de entrega</button>
+              <div class="accordion-content">
+                <p>Entregamos para todo o Brasil. Frete grátis acima de R$ 299. Prazo de 3 a 7 dias úteis para capitais
+                  e 5 a 12 dias úteis para demais regiões.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">Trocas e devoluções</button>
+              <div class="accordion-content">
+                <p>Aceitamos trocas e devoluções em até 7 dias após o recebimento, desde que o produto esteja lacrado e
+                  sem uso.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">Autenticidade garantida</button>
+              <div class="accordion-content">
+                <p>Todos os produtos são 100% originais, importados diretamente das casas produtoras ou distribuidores
+                  oficiais.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="js/ui.js"></script>
-<script src="js/cart.js"></script>
-<script src="js/favorites.js"></script>
-<script src="js/search.js"></script>
-<script src="js/product-modal.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/product-modal.js"></script>
 </body>
+
 </html>
