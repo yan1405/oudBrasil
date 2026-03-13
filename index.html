@@ -36,10 +36,10 @@
       <button aria-label="Favoritos">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
       </button>
-      <button aria-label="Carrinho">
+      <button aria-label="Carrinho" id="cart-icon">
         <span class="icon-wrap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-badge">2</span>
+          <span class="cart-badge" id="cart-badge">0</span>
         </span>
       </button>
       <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -146,6 +146,7 @@
           <h3 class="product-name">Royal Oud Noir</h3>
           <p class="product-price"><span>R$</span>890,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="arab1" data-name="Royal Oud Noir" data-price="890" data-img="https://picsum.photos/seed/arab1/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -159,6 +160,7 @@
           <h3 class="product-name">Attar Al Amani</h3>
           <p class="product-price"><span>R$</span>640,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="arab2" data-name="Attar Al Amani" data-price="640" data-img="https://picsum.photos/seed/arab2/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -171,6 +173,7 @@
           <h3 class="product-name">Bakhoor Rasmi</h3>
           <p class="product-price"><span>R$</span>450,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="arab3" data-name="Bakhoor Rasmi" data-price="450" data-img="https://picsum.photos/seed/arab3/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -184,6 +187,7 @@
           <h3 class="product-name">Oud al Layl</h3>
           <p class="product-price"><span>R$</span>1.150,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="arab4" data-name="Oud al Layl" data-price="1150" data-img="https://picsum.photos/seed/arab4/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -229,6 +233,7 @@
           <h3 class="product-name">Lumière Blanche</h3>
           <p class="product-price"><span>R$</span>1.290,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp1" data-name="Lumière Blanche" data-price="1290" data-img="https://picsum.photos/seed/imp1/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -242,6 +247,7 @@
           <h3 class="product-name">Noir Absolu</h3>
           <p class="product-price"><span>R$</span>1.580,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp2" data-name="Noir Absolu" data-price="1580" data-img="https://picsum.photos/seed/imp2/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -254,6 +260,7 @@
           <h3 class="product-name">Santal Élite</h3>
           <p class="product-price"><span>R$</span>980,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp3" data-name="Santal Élite" data-price="980" data-img="https://picsum.photos/seed/imp3/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -266,6 +273,7 @@
           <h3 class="product-name">Aqua Divina</h3>
           <p class="product-price"><span>R$</span>760,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp4" data-name="Aqua Divina" data-price="760" data-img="https://picsum.photos/seed/imp4/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -279,6 +287,7 @@
           <h3 class="product-name">Rose de Minuit</h3>
           <p class="product-price"><span>R$</span>1.120,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp5" data-name="Rose de Minuit" data-price="1120" data-img="https://picsum.photos/seed/imp5/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -292,6 +301,7 @@
           <h3 class="product-name">Gourmand Secret</h3>
           <p class="product-price"><span>R$</span>870,00</p>
           <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-primary btn-add-cart" data-id="imp6" data-name="Gourmand Secret" data-price="870" data-img="https://picsum.photos/seed/imp6/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
 
@@ -402,6 +412,24 @@
     </div>
   </div>
 </footer>
+
+<!-- Cart Drawer -->
+<div id="cart-drawer" class="cart-drawer" aria-hidden="true">
+  <div class="cart-drawer-header">
+    <span class="cart-drawer-title">Sua Sacola</span>
+    <button class="cart-drawer-close" id="cart-close" aria-label="Fechar carrinho">&times;</button>
+  </div>
+  <div class="cart-drawer-items" id="cart-items-list"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span id="cart-subtotal-value">R$ 0,00</span>
+    </div>
+    <p class="cart-shipping-notice">Frete grátis acima de R$ 299</p>
+    <button class="btn btn-primary cart-checkout-btn">Finalizar compra</button>
+  </div>
+</div>
+<div id="cart-backdrop" class="cart-backdrop"></div>
 
 <script src="js/ui.js"></script>
 <script src="js/cart.js"></script>
