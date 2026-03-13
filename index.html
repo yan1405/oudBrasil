@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oud Brasil — O Brasil tem seu próprio luxo.</title>
+  <meta name="description" content="Perfumaria de luxo: Árabes, Importados e exclusividades Só no Brasil. Descubra o Oud Brasil." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      background: #F5F1EB;
+      color: #0D0D0D;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: 'DM Sans', sans-serif; border: none; background: none; }
+
+    /* ===================== DESIGN TOKENS ===================== */
+    :root {
+      --clr-dark: #0D0D0D;
+      --clr-bg: #F5F1EB;
+      --clr-white: #FFFFFF;
+      --clr-gold: #C8A96E;
+      --clr-moss: #4A6741;
+      --clr-indigo: #2C4A6E;
+      --clr-border: #E5E0D8;
+      --clr-muted: #9A948E;
+      --max-w: 1280px;
+      --gap: 32px;
+    }
+
+    /* ===================== TYPOGRAPHY ===================== */
+    .t-editorial { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+    .t-h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.1; }
+    .t-h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; }
+    .t-h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(20px, 2.5vw, 28px); line-height: 1.2; }
+    .t-ui { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; }
+    .t-caption { font-size: 12px; font-weight: 300; color: var(--clr-muted); }
+
+    /* ===================== LAYOUT ===================== */
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
+    @media (max-width: 767px) { .container { padding: 0 20px; } }
+
+    /* ===================== BUTTONS ===================== */
+    .btn { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; padding: 14px 32px; border-radius: 0; transition: all 0.3s ease; cursor: pointer; }
+    .btn-primary { background: var(--clr-dark); color: var(--clr-white); border: 1px solid var(--clr-dark); }
+    .btn-primary:hover { background: #2C2C2C; }
+    .btn-ghost { background: transparent; color: var(--clr-dark); border: 1px solid var(--clr-dark); }
+    .btn-ghost:hover { background: var(--clr-dark); color: var(--clr-white); }
+    .btn-ghost-light { background: transparent; color: var(--clr-white); border: 1px solid var(--clr-white); }
+    .btn-ghost-light:hover { background: var(--clr-white); color: var(--clr-dark); }
+
+    /* ===================== NAVBAR ===================== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: 72px;
+      display: flex; align-items: center;
+      background: transparent;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    #navbar.scrolled {
+      background: var(--clr-bg);
+      border-bottom-color: var(--clr-border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 48px;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.06em; color: var(--clr-white); transition: color 0.3s; }
+    #navbar.scrolled .nav-logo { color: var(--clr-dark); }
+    .nav-links { display: flex; gap: 40px; }
+    .nav-links a { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clr-white); transition: color 0.3s; position: relative; padding-bottom: 4px; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--clr-gold); transition: width 0.3s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    #navbar.scrolled .nav-links a { color: var(--clr-dark); }
+    .nav-icons { display: flex; gap: 20px; align-items: center; }
+    .nav-icons button { color: var(--clr-white); transition: color 0.3s; background: none; border: none; }
+    #navbar.scrolled .nav-icons button { color: var(--clr-dark); }
+    .nav-icons button:hover { color: var(--clr-gold); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+    .nav-hamburger span { display: block; width: 24px; height: 1px; background: var(--clr-white); transition: background 0.3s; }
+    #navbar.scrolled .nav-hamburger span { background: var(--clr-dark); }
+    @media (max-width: 767px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--clr-bg); padding: 24px 20px; gap: 20px; border-bottom: 1px solid var(--clr-border); }
+      .nav-links.open { display: flex; }
+      .nav-links a { color: var(--clr-dark); font-size: 13px; }
+      .nav-hamburger { display: flex; }
+      .nav-icons button { color: var(--clr-white); }
+      #navbar.scrolled .nav-icons button { color: var(--clr-dark); }
+    }
+    @media (max-width: 1023px) {
+      .nav-inner { padding: 0 24px; }
+    }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://picsum.photos/seed/oudbrasil-hero/1600/900') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.6) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 780px; padding: 0 24px; animation: heroFadeIn 1.2s ease forwards; opacity: 0; }
+    @keyframes heroFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: var(--clr-gold); margin-bottom: 24px; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 6vw, 76px); line-height: 1.05; color: var(--clr-white); margin-bottom: 20px; }
+    .hero-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 460px; margin: 0 auto 40px; }
+    .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ===================== SECTION HEADER ===================== */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: var(--clr-gold); margin-bottom: 12px; }
+    .section-desc { font-size: 15px; font-weight: 300; color: var(--clr-muted); max-width: 480px; margin: 16px auto 0; line-height: 1.7; }
+
+    /* ===================== FAMÍLIAS OLFATIVAS ===================== */
+    #familias { background: var(--clr-bg); padding: 96px 0; }
+    .familias-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+    .familia-card {
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+      padding: 32px 16px; cursor: pointer;
+      border-bottom: 2px solid transparent; transition: border-color 0.3s ease;
+    }
+    .familia-card:hover { border-bottom-color: var(--clr-gold); }
+    .familia-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
+    .familia-icon svg { width: 40px; height: 40px; stroke: var(--clr-dark); fill: none; stroke-width: 1.2; transition: stroke 0.3s; }
+    .familia-card:hover .familia-icon svg { stroke: var(--clr-gold); }
+    .familia-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clr-dark); }
+    @media (max-width: 767px) { .familias-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 480px) { .familias-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ===================== PRODUCT CARD ===================== */
+    .produtos-section { padding: 104px 0; }
+    .produtos-section.alt-bg { background: var(--clr-white); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    @media (max-width: 1023px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 767px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+    @media (max-width: 420px) { .product-grid { grid-template-columns: 1fr; } }
+
+    .product-card { background: var(--clr-white); cursor: pointer; }
+    .product-card-img {
+      position: relative; overflow: hidden;
+      aspect-ratio: 3/4; background: #F8F6F2;
+    }
+    .product-card-img img { transition: transform 0.4s ease; }
+    .product-card:hover .product-card-img img { transform: scale(1.03); }
+    .product-badge {
+      position: absolute; top: 16px; left: 16px;
+      font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em;
+    }
+    .badge-gold { color: var(--clr-gold); }
+    .badge-moss { color: var(--clr-moss); }
+    .badge-dark { color: var(--clr-dark); }
+    .product-card-info { padding: 20px 4px; }
+    .product-category { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; color: var(--clr-muted); margin-bottom: 8px; }
+    .product-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px; color: var(--clr-dark); margin-bottom: 6px; line-height: 1.25; }
+    .product-price { font-size: 14px; font-weight: 400; color: var(--clr-dark); margin-bottom: 16px; }
+    .product-price span { font-weight: 300; font-size: 12px; color: var(--clr-muted); margin-right: 4px; }
+
+    /* ===================== BANNER SÓ NO BRASIL ===================== */
+    #sonobrasil {
+      position: relative; background: var(--clr-dark); overflow: hidden;
+      padding: 120px 0;
+    }
+    .sonobrasil-bg {
+      position: absolute; inset: 0; opacity: 0.22;
+      background: url('https://picsum.photos/seed/sonobrasil/1400/900') center/cover no-repeat;
+    }
+    .sonobrasil-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .sonobrasil-content { display: flex; flex-direction: column; }
+    .sonobrasil-badge { display: inline-block; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; color: var(--clr-moss); border: 1px solid var(--clr-moss); padding: 6px 14px; margin-bottom: 32px; }
+    .sonobrasil-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 60px); color: var(--clr-white); line-height: 1.1; margin-bottom: 24px; }
+    .sonobrasil-desc { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 40px; max-width: 380px; }
+    .sonobrasil-img { aspect-ratio: 3/4; overflow: hidden; }
+    .sonobrasil-img img { object-fit: cover; width: 100%; height: 100%; }
+    @media (max-width: 767px) {
+      .sonobrasil-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sonobrasil-img { max-height: 380px; }
+    }
+
+    /* ===================== PROPOSTA DE VALOR ===================== */
+    #valor { background: var(--clr-bg); padding: 96px 0; }
+    .valor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+    .valor-item { text-align: center; }
+    .valor-icon { width: 56px; height: 56px; margin: 0 auto 20px; }
+    .valor-icon svg { width: 100%; height: 100%; stroke: var(--clr-gold); fill: none; stroke-width: 1.2; }
+    .valor-title { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; margin-bottom: 10px; }
+    .valor-desc { font-size: 13px; font-weight: 300; color: var(--clr-muted); line-height: 1.7; }
+    @media (max-width: 767px) { .valor-grid { grid-template-columns: 1fr; gap: 36px; } }
+    /* sep dourado */
+    .gold-sep { width: 40px; height: 1px; background: var(--clr-gold); margin: 0 auto 24px; }
+
+    /* ===================== FOOTER ===================== */
+    #footer { background: var(--clr-dark); color: var(--clr-bg); padding: 80px 0 40px; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+    .footer-brand-logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .footer-tagline { font-size: 12px; font-weight: 300; color: rgba(245,241,235,0.5); margin-bottom: 28px; line-height: 1.6; }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { width: 40px; height: 40px; border: 1px solid rgba(245,241,235,0.2); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, color 0.3s; color: var(--clr-bg); }
+    .footer-social a:hover { border-color: var(--clr-gold); color: var(--clr-gold); }
+    .footer-social a svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+    .footer-col-title { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: var(--clr-gold); margin-bottom: 20px; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+    .footer-col ul li a { font-size: 13px; font-weight: 300; color: rgba(245,241,235,0.65); transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--clr-bg); }
+    .footer-bottom { border-top: 1px solid rgba(245,241,235,0.1); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 11px; font-weight: 300; color: rgba(245,241,235,0.4); }
+    @media (max-width: 1023px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 767px) { .footer-top { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* ===================== DIVIDER ===================== */
+    .section-divider { height: 1px; background: var(--clr-border); }
+
+    /* ===================== SCROLL REVEAL ===================== */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===================== STICKY CART INDICATOR ===================== */
+    .cart-badge {
+      position: absolute; top: -6px; right: -8px;
+      width: 16px; height: 16px; background: var(--clr-gold);
+      border-radius: 50%; font-size: 9px; font-weight: 500;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--clr-dark);
+    }
+    .icon-wrap { position: relative; display: inline-flex; }
+  </style>
+</head>
+<body>
+
+<!-- SEÇÃO: NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" aria-label="Oud Brasil - Página inicial">Oud Brasil</a>
+
+    <!-- Links Centrais -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#arabes">Árabes</a></li>
+      <li><a href="#importados">Importados</a></li>
+      <li><a href="#sonobrasil">Só no Brasil</a></li>
+    </ul>
+
+    <!-- Ícones -->
+    <div class="nav-icons">
+      <button aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="Favoritos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button aria-label="Carrinho">
+        <span class="icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge">2</span>
+        </span>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- SEÇÃO: HERO -->
+<section id="hero" aria-label="Banner principal">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Coleção 2025</p>
+    <h1 class="hero-title t-editorial">O Oriente encontra o Brasil.</h1>
+    <p class="hero-sub">Fragrâncias que transcendem fronteiras. Ouds raros, importados exclusivos e a alma brasileira destilada em cada gota.</p>
+    <div class="hero-cta">
+      <a href="#arabes" class="btn btn-primary">Explorar coleção</a>
+      <a href="#valor" class="btn btn-ghost-light">Nossa história</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: FAMÍLIAS OLFATIVAS -->
+<section id="familias" aria-label="Famílias olfativas">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Descubra por notas</p>
+      <h2 class="t-h2">Famílias Olfativas</h2>
+    </div>
+    <div class="familias-grid">
+
+      <!-- Amadeirados -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><path d="M20 4 C20 4 8 14 8 24 a12 12 0 0 0 24 0 C32 14 20 4 20 4z"/><line x1="20" y1="28" x2="20" y2="36"/></svg>
+        </div>
+        <span class="familia-label">Amadeirados</span>
+      </div>
+
+      <!-- Cítricos -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><path d="M20 7 v26 M7 20 h26"/><path d="M11 11 l18 18 M29 11 l-18 18"/></svg>
+        </div>
+        <span class="familia-label">Cítricos</span>
+      </div>
+
+      <!-- Florais -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="4"/><ellipse cx="20" cy="10" rx="4" ry="7"/><ellipse cx="20" cy="30" rx="4" ry="7"/><ellipse cx="10" cy="20" rx="7" ry="4"/><ellipse cx="30" cy="20" rx="7" ry="4"/></svg>
+        </div>
+        <span class="familia-label">Florais</span>
+      </div>
+
+      <!-- Orientais -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><polygon points="20,4 24,15 36,15 26,23 30,35 20,27 10,35 14,23 4,15 16,15"/></svg>
+        </div>
+        <span class="familia-label">Orientais</span>
+      </div>
+
+      <!-- Frescos -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><path d="M8 28 Q14 18 20 22 Q26 26 32 12"/><path d="M6 34 Q13 22 20 28 Q27 34 34 20" opacity="0.5"/></svg>
+        </div>
+        <span class="familia-label">Frescos</span>
+      </div>
+
+      <!-- Gourmand -->
+      <div class="familia-card reveal">
+        <div class="familia-icon">
+          <svg viewBox="0 0 40 40"><path d="M12 32 Q12 20 20 20 Q28 20 28 32 Z"/><path d="M16 20 Q16 12 20 10 Q24 12 24 20"/><circle cx="20" cy="10" r="2.5"/></svg>
+        </div>
+        <span class="familia-label">Gourmand</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SEÇÃO: DESTAQUES ÁRABES -->
+<section id="arabes" class="produtos-section" aria-label="Coleção Árabe">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Autenticidade do Oriente Médio</p>
+      <h2 class="t-h2">Coleção Árabe</h2>
+      <p class="section-desc">Ouds raros, bakhoor artesanal e attars de autor — a essência milenar do Oriente reimaginada para o Brasil.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arab1/600/800" alt="Royal Oud Noir" loading="lazy" />
+          <span class="product-badge badge-gold">Exclusivo</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Orientais · Amadeirados</p>
+          <h3 class="product-name">Royal Oud Noir</h3>
+          <p class="product-price"><span>R$</span>890,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arab2/600/800" alt="Attar Al Amani" loading="lazy" />
+          <span class="product-badge badge-dark">Mais vendido</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Florais · Orientais</p>
+          <h3 class="product-name">Attar Al Amani</h3>
+          <p class="product-price"><span>R$</span>640,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arab3/600/800" alt="Bakhoor Rasmi" loading="lazy" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Amadeirados</p>
+          <h3 class="product-name">Bakhoor Rasmi</h3>
+          <p class="product-price"><span>R$</span>450,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arab4/600/800" alt="Oud al Layl" loading="lazy" />
+          <span class="product-badge badge-gold">Novo</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Orientais</p>
+          <h3 class="product-name">Oud al Layl</h3>
+          <p class="product-price"><span>R$</span>1.150,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: BANNER SÓ NO BRASIL -->
+<section id="sonobrasil" aria-label="Só no Brasil">
+  <div class="sonobrasil-bg"></div>
+  <div class="container">
+    <div class="sonobrasil-inner reveal">
+      <div class="sonobrasil-content">
+        <span class="sonobrasil-badge">Só no Brasil</span>
+        <h2 class="sonobrasil-title">Fragrâncias que só existem aqui.</h2>
+        <p class="sonobrasil-desc">Lançamentos mundiais com distribuição exclusiva no Brasil. Seja o primeiro a descobrir.</p>
+        <a href="#" class="btn btn-ghost-light">Ver lançamentos</a>
+      </div>
+      <div class="sonobrasil-img">
+        <img src="https://picsum.photos/seed/sonobrasil-prod/800/1000" alt="Perfume frasco natureza tropical" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: IMPORTADOS -->
+<section id="importados" class="produtos-section alt-bg" aria-label="Importados">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Grife Internacional</p>
+      <h2 class="t-h2">Importados</h2>
+      <p class="section-desc">Criações das mais renomadas casas de perfumaria do mundo, chegando direto ao seu alcance.</p>
+    </div>
+    <div class="product-grid" style="grid-template-columns: repeat(3,1fr);">
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp1/600/800" alt="Lumière Blanche" loading="lazy" />
+          <span class="product-badge badge-dark">Importado</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Florais · Frescos</p>
+          <h3 class="product-name">Lumière Blanche</h3>
+          <p class="product-price"><span>R$</span>1.290,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp2/600/800" alt="Noir Absolu" loading="lazy" />
+          <span class="product-badge badge-gold">Best seller</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Amadeirados · Orientais</p>
+          <h3 class="product-name">Noir Absolu</h3>
+          <p class="product-price"><span>R$</span>1.580,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp3/600/800" alt="Santal Élite" loading="lazy" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Amadeirados</p>
+          <h3 class="product-name">Santal Élite</h3>
+          <p class="product-price"><span>R$</span>980,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp4/600/800" alt="Aqua Divina" loading="lazy" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Frescos · Cítricos</p>
+          <h3 class="product-name">Aqua Divina</h3>
+          <p class="product-price"><span>R$</span>760,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp5/600/800" alt="Rose de Minuit" loading="lazy" />
+          <span class="product-badge badge-moss">Só no Brasil</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Florais</p>
+          <h3 class="product-name">Rose de Minuit</h3>
+          <p class="product-price"><span>R$</span>1.120,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/imp6/600/800" alt="Gourmand Secret" loading="lazy" />
+          <span class="product-badge badge-dark">Novo</span>
+        </div>
+        <div class="product-card-info">
+          <p class="product-category">Gourmand</p>
+          <h3 class="product-name">Gourmand Secret</h3>
+          <p class="product-price"><span>R$</span>870,00</p>
+          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: PROPOSTA DE VALOR -->
+<section id="valor" aria-label="Por que escolher a Oud Brasil">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Por que escolher a Oud Brasil</p>
+      <h2 class="t-h2">Nossa Promessa</h2>
+    </div>
+    <div class="valor-grid">
+
+      <div class="valor-item reveal">
+        <div class="valor-icon">
+          <svg viewBox="0 0 56 56"><path d="M28 8 L44 16 L44 30 Q44 42 28 50 Q12 42 12 30 L12 16 Z"/><path d="M20 28 l6 6 10-10"/></svg>
+        </div>
+        <div class="gold-sep"></div>
+        <h3 class="valor-title">Frascos Originais e Lacrados</h3>
+        <p class="valor-desc">Garantia de autenticidade em cada produto. Trabalhamos diretamente com importadoras certificadas.</p>
+      </div>
+
+      <div class="valor-item reveal">
+        <div class="valor-icon">
+          <svg viewBox="0 0 56 56"><path d="M8 28 h40 M28 8 v40"/><rect x="14" y="14" width="28" height="28"/><path d="M20 8 v6 M36 8 v6 M8 20 h6 M42 20 h6"/></svg>
+        </div>
+        <div class="gold-sep"></div>
+        <h3 class="valor-title">Frete Grátis acima de R$ 299</h3>
+        <p class="valor-desc">Entregamos para todo o Brasil com rapidez e segurança. Pedidos acima de R$ 299 com frete gratuito.</p>
+      </div>
+
+      <div class="valor-item reveal">
+        <div class="valor-icon">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="20" r="10"/><path d="M12 48 Q12 36 28 36 Q44 36 44 48"/><path d="M38 14 l4 4"/><path d="M42 18 Q46 22 42 26 Q36 30 28 30"/></svg>
+        </div>
+        <div class="gold-sep"></div>
+        <h3 class="valor-title">Atendimento Especializado</h3>
+        <p class="valor-desc">Consultores especializados em perfumaria árabe e importada prontos para te orientar na escolha ideal.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: FOOTER -->
+<footer id="footer" aria-label="Rodapé">
+  <div class="container">
+    <div class="footer-top">
+
+      <!-- Marca -->
+      <div>
+        <div class="footer-brand-logo">Oud Brasil</div>
+        <p class="footer-tagline">O Brasil tem seu próprio luxo.<br/>Perfumaria árabe, importada e exclusividades nacionais.</p>
+        <div class="footer-social">
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coleções -->
+      <div class="footer-col">
+        <p class="footer-col-title">Coleções</p>
+        <ul>
+          <li><a href="#arabes">Árabes</a></li>
+          <li><a href="#importados">Importados</a></li>
+          <li><a href="#sonobrasil">Só no Brasil</a></li>
+        </ul>
+      </div>
+
+      <!-- Famílias -->
+      <div class="footer-col">
+        <p class="footer-col-title">Famílias</p>
+        <ul>
+          <li><a href="#">Amadeirados</a></li>
+          <li><a href="#">Cítricos</a></li>
+          <li><a href="#">Florais</a></li>
+          <li><a href="#">Orientais</a></li>
+          <li><a href="#">Frescos</a></li>
+          <li><a href="#">Gourmand</a></li>
+        </ul>
+      </div>
+
+      <!-- Institucional -->
+      <div class="footer-col">
+        <p class="footer-col-title">Institucional</p>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Oud Brasil. Todos os direitos reservados.</span>
+      <span class="footer-copy">Feito com luxo no Brasil 🇧🇷</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===================== NAVBAR SCROLL =====================
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // ===================== HAMBURGER MENU =====================
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // ===================== SCROLL REVEAL =====================
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ===================== SMOOTH CLOSE MENU ON LINK CLICK =====================
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
