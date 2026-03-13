@@ -192,4 +192,7 @@
     updateFavoritesBadge();
     updateFavoriteButtons();
   });
+
+  // Expose for cross-module integration (product-modal)
+  window.OudBrasilFavorites = { toggleFavorite: toggleFavorite };
 })();

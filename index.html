@@ -151,7 +151,7 @@
           <p class="product-category">Orientais · Amadeirados</p>
           <h3 class="product-name">Royal Oud Noir</h3>
           <p class="product-price"><span>R$</span>890,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="royal-oud">Ver detalhes</button>
           <button class="btn btn-primary btn-add-cart" data-id="arab1" data-name="Royal Oud Noir" data-price="890" data-img="https://picsum.photos/seed/arab1/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
@@ -168,7 +168,7 @@
           <p class="product-category">Florais · Orientais</p>
           <h3 class="product-name">Attar Al Amani</h3>
           <p class="product-price"><span>R$</span>640,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="attar-al-ward">Ver detalhes</button>
           <button class="btn btn-primary btn-add-cart" data-id="arab2" data-name="Attar Al Amani" data-price="640" data-img="https://picsum.photos/seed/arab2/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
@@ -184,7 +184,7 @@
           <p class="product-category">Amadeirados</p>
           <h3 class="product-name">Bakhoor Rasmi</h3>
           <p class="product-price"><span>R$</span>450,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="bakhoor-sultani">Ver detalhes</button>
           <button class="btn btn-primary btn-add-cart" data-id="arab3" data-name="Bakhoor Rasmi" data-price="450" data-img="https://picsum.photos/seed/arab3/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
@@ -201,7 +201,7 @@
           <p class="product-category">Orientais</p>
           <h3 class="product-name">Oud al Layl</h3>
           <p class="product-price"><span>R$</span>1.150,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
+          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="black-oud">Ver detalhes</button>
           <button class="btn btn-primary btn-add-cart" data-id="arab4" data-name="Oud al Layl" data-price="1150" data-img="https://picsum.photos/seed/arab4/600/800">Adicionar ao carrinho</button>
         </div>
       </article>
@@ -483,9 +483,90 @@
   </div>
 </div>
 
+<!-- Product Modal -->
+<div id="product-modal" class="product-modal" aria-hidden="true">
+  <div class="product-modal-overlay"></div>
+  <div class="product-modal-container">
+    <button class="product-modal-close" id="product-modal-close" aria-label="Fechar">&times;</button>
+    <div class="product-modal-grid">
+
+      <!-- Galeria -->
+      <div class="product-gallery">
+        <div class="product-gallery-main">
+          <img id="modal-img-main" src="" alt="" />
+        </div>
+        <div class="product-gallery-thumbs" id="modal-thumbs"></div>
+      </div>
+
+      <!-- Informações -->
+      <div class="product-info">
+        <p class="product-info-category" id="modal-category"></p>
+        <h2 class="product-info-name" id="modal-name"></h2>
+        <p class="product-info-origin" id="modal-origin"></p>
+        <p class="product-info-price" id="modal-price"></p>
+
+        <!-- Volumes -->
+        <div class="product-volume-selector">
+          <p class="product-volume-label">Volume</p>
+          <div class="product-volume-opts" id="modal-volumes"></div>
+        </div>
+
+        <!-- Pirâmide olfativa -->
+        <div class="olfative-pyramid">
+          <p class="olfative-pyramid-title">Pirâmide Olfativa</p>
+          <div class="pyramid-row">
+            <span class="pyramid-label">Topo</span>
+            <span class="pyramid-notes" id="modal-notes-top"></span>
+          </div>
+          <div class="pyramid-row">
+            <span class="pyramid-label">Coração</span>
+            <span class="pyramid-notes" id="modal-notes-heart"></span>
+          </div>
+          <div class="pyramid-row">
+            <span class="pyramid-label">Base</span>
+            <span class="pyramid-notes" id="modal-notes-base"></span>
+          </div>
+        </div>
+
+        <!-- Descrição -->
+        <p class="product-info-description" id="modal-description"></p>
+
+        <!-- CTAs -->
+        <div class="product-modal-ctas">
+          <button class="btn btn-primary product-modal-add-cart" id="modal-add-cart">Adicionar ao carrinho</button>
+          <button class="btn btn-ghost product-modal-add-favorite" id="modal-add-favorite">+ Lista de desejos</button>
+        </div>
+
+        <!-- Accordion -->
+        <div class="product-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Política de entrega</button>
+            <div class="accordion-content">
+              <p>Entregamos para todo o Brasil. Frete grátis acima de R$ 299. Prazo de 3 a 7 dias úteis para capitais e 5 a 12 dias úteis para demais regiões.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Trocas e devoluções</button>
+            <div class="accordion-content">
+              <p>Aceitamos trocas e devoluções em até 7 dias após o recebimento, desde que o produto esteja lacrado e sem uso.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Autenticidade garantida</button>
+            <div class="accordion-content">
+              <p>Todos os produtos são 100% originais, importados diretamente das casas produtoras ou distribuidores oficiais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="js/ui.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/favorites.js"></script>
 <script src="js/search.js"></script>
+<script src="js/product-modal.js"></script>
 </body>
 </html>
