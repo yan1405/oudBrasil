@@ -101,3 +101,80 @@ document.querySelectorAll('.categoria-tabs').forEach(tabsEl => {
     aplicarFiltros();
   });
 })();
+
+// ===================== DEPOIMENTOS CAROUSEL =====================
+(function () {
+  const track = document.getElementById('depoimentos-track');
+  const prevBtn = document.getElementById('dep-prev');
+  const nextBtn = document.getElementById('dep-next');
+  const dotsWrap = document.getElementById('dep-dots');
+  if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
+
+  const cards = track.querySelectorAll('.depoimento-card');
+  const total = cards.length;
+  let idx = 0;
+  let autoplayId = null;
+
+  function visiveis() {
+    return window.innerWidth > 767 ? 3 : 1;
+  }
+
+  function totalGrupos() {
+    return Math.ceil(total / visiveis());
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    const n = totalGrupos();
+    for (let i = 0; i < n; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'depoimentos-dot' + (i === idx ? ' active' : '');
+      dot.setAttribute('aria-label', 'Ir para grupo ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function updateTrack() {
+    const card = cards[0];
+    const gap = parseFloat(getComputedStyle(track).gap) || 24;
+    const cardW = card.offsetWidth + gap;
+    const offset = idx * visiveis() * cardW;
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    dotsWrap.querySelectorAll('.depoimentos-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  function goTo(i) {
+    idx = i;
+    if (idx >= totalGrupos()) idx = 0;
+    if (idx < 0) idx = totalGrupos() - 1;
+    updateTrack();
+  }
+
+  prevBtn.addEventListener('click', function () { goTo(idx - 1); });
+  nextBtn.addEventListener('click', function () { goTo(idx + 1); });
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayId = setInterval(function () { goTo(idx + 1); }, 5000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayId) { clearInterval(autoplayId); autoplayId = null; }
+  }
+
+  track.addEventListener('mouseenter', stopAutoplay);
+  track.addEventListener('mouseleave', startAutoplay);
+
+  window.addEventListener('resize', function () {
+    if (idx >= totalGrupos()) idx = totalGrupos() - 1;
+    buildDots();
+    updateTrack();
+  });
+
+  buildDots();
+  updateTrack();
+  startAutoplay();
+})();

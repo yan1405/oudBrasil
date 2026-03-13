@@ -179,6 +179,79 @@
   .sonobrasil-img { max-height: 380px; }
 }
 
+/* ===================== DEPOIMENTOS ===================== */
+#depoimentos { background: var(--clr-white); padding: 104px 0; }
+.depoimentos-rating-geral {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 16px;
+}
+.depoimentos-stars-geral { color: var(--clr-gold); font-size: 20px; letter-spacing: 2px; }
+.depoimentos-rating-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400;
+  color: var(--clr-dark);
+}
+.depoimentos-rating-base {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-muted);
+}
+.depoimentos-carousel-wrap { overflow: hidden; margin-top: 56px; }
+.depoimentos-track {
+  display: flex; gap: 24px;
+  transition: transform 0.5s ease;
+}
+.depoimento-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  background: var(--clr-bg); padding: 40px 32px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.depoimento-stars { color: var(--clr-gold); font-size: 16px; letter-spacing: 2px; }
+.depoimento-text {
+  font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300;
+  line-height: 1.6; color: var(--clr-dark); font-style: italic;
+}
+.depoimento-autor { display: flex; flex-direction: column; gap: 4px; }
+.depoimento-nome {
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-dark);
+}
+.depoimento-cidade {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-muted);
+}
+.depoimento-produto {
+  font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.10em; color: var(--clr-gold);
+  margin-top: auto;
+}
+.depoimentos-nav {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  margin-top: 40px;
+}
+.depoimentos-prev,
+.depoimentos-next {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--clr-border); background: none;
+  font-size: 18px; color: var(--clr-dark); cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.depoimentos-prev:hover,
+.depoimentos-next:hover {
+  background: var(--clr-dark); color: var(--clr-white);
+  border-color: var(--clr-dark);
+}
+.depoimentos-dots { display: flex; gap: 8px; align-items: center; }
+.depoimentos-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--clr-border); border: none; padding: 0;
+  cursor: pointer; transition: background 0.3s;
+}
+.depoimentos-dot.active { background: var(--clr-dark); }
+@media (max-width: 767px) {
+  .depoimento-card { flex: 0 0 85vw; }
+  .depoimentos-track { gap: 16px; }
+}
+
 /* ===================== PROPOSTA DE VALOR ===================== */
 #valor { background: var(--clr-bg); padding: 96px 0; }
 .valor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
