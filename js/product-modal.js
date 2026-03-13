@@ -69,6 +69,54 @@
       ],
       notes: { top: 'Pimenta negra, Couro', heart: 'Oud defumado, Cedro', base: 'Âmbar negro, Vetiver' },
       description: 'Black Oud é a expressão mais intensa e masculina da coleção árabe. Uma composição ousada que combina o oud defumado com couro e especiarias, criando uma sillage envolvente e memorável.'
+    },
+    {
+      id: 'oud-oleo-puro',
+      name: 'Oud em Óleo Puro',
+      category: 'Óleo Puro',
+      origin: 'Camboja',
+      price: 1200,
+      volumes: ['3ml', '6ml', '12ml'],
+      img: 'https://picsum.photos/seed/oudoleo/600/800',
+      thumbs: ['https://picsum.photos/seed/oudoleo1/200/200','https://picsum.photos/seed/oudoleo2/200/200','https://picsum.photos/seed/oudoleo3/200/200'],
+      notes: { top: 'Oud puro', heart: 'Madeira de Aquilaria', base: 'Resina, Terra úmida' },
+      description: 'O óleo de oud cambojano é considerado o mais refinado do mundo. Extraído de árvores centenárias, cada gota carrega décadas de transformação natural. Aplicado diretamente na pele, desenvolve uma sillage única e intransferível.'
+    },
+    {
+      id: 'attar-musk',
+      name: 'Attar Musk Al Tahara',
+      category: 'Attar',
+      origin: 'Índia',
+      price: 480,
+      volumes: ['12ml', '25ml'],
+      img: 'https://picsum.photos/seed/attarmusk/600/800',
+      thumbs: ['https://picsum.photos/seed/attarmusk1/200/200','https://picsum.photos/seed/attarmusk2/200/200','https://picsum.photos/seed/attarmusk3/200/200'],
+      notes: { top: 'Almíscar branco, Iris', heart: 'Rosa, Sândalo', base: 'Âmbar, Baunilha' },
+      description: 'Attar Musk Al Tahara é uma composição pura e sem álcool, destilada na tradição centenária de Kannauj, na Índia. O almíscar branco envolve a pele com uma segunda natureza: limpo, sensual e duradouro.'
+    },
+    {
+      id: 'oud-rose',
+      name: 'Oud Rose',
+      category: 'Oud',
+      origin: 'Marrocos',
+      price: 760,
+      volumes: ['50ml', '100ml'],
+      img: 'https://picsum.photos/seed/oudrose/600/800',
+      thumbs: ['https://picsum.photos/seed/oudrose1/200/200','https://picsum.photos/seed/oudrose2/200/200','https://picsum.photos/seed/oudrose3/200/200'],
+      notes: { top: 'Rosa marroquina, Framboesa', heart: 'Oud, Patchouli', base: 'Sândalo, Âmbar rosa' },
+      description: 'Oud Rose é a síntese entre o Oriente e o Mediterrâneo. A rosa marroquina, colhida ao amanhecer nos jardins de Kelaat Mgouna, encontra o oud em uma dança íntima e sofisticada que dura horas na pele.'
+    },
+    {
+      id: 'bakhoor-amber',
+      name: 'Bakhoor Amber Nights',
+      category: 'Bakhoor',
+      origin: 'Arábia Saudita',
+      price: 390,
+      volumes: ['50g', '100g'],
+      img: 'https://picsum.photos/seed/bakhooramber/600/800',
+      thumbs: ['https://picsum.photos/seed/bakhooramber1/200/200','https://picsum.photos/seed/bakhooramber2/200/200','https://picsum.photos/seed/bakhooramber3/200/200'],
+      notes: { top: 'Âmbar, Baunilha', heart: 'Oud, Resina benjoin', base: 'Sândalo, Almíscar' },
+      description: 'Bakhoor Amber Nights traz o calor das noites do deserto para dentro de casa. Pastilhas artesanais compostas de âmbar, baunilha e oud criam uma atmosfera de aconchego e mistério quando queimadas lentamente.'
     }
   ];
 

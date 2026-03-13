@@ -36,3 +36,25 @@ navLinks.querySelectorAll('a').forEach(link => {
     hamburger.setAttribute('aria-expanded', 'false');
   });
 });
+
+// ===================== TABS DE CATEGORIA =====================
+document.querySelectorAll('.categoria-tabs').forEach(tabsEl => {
+  tabsEl.addEventListener('click', e => {
+    const tab = e.target.closest('.categoria-tab');
+    if (!tab) return;
+    const tabsGroup = tab.closest('.categoria-tabs');
+    const gridId = tabsGroup.id.replace('-tabs', '-grid');
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    tabsGroup.querySelectorAll('.categoria-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filtro = tab.dataset.tab;
+    grid.querySelectorAll('.product-card').forEach(card => {
+      if (filtro === 'todos' || card.dataset.categoria === filtro) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});

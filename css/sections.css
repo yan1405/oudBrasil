@@ -43,6 +43,55 @@
 @media (max-width: 767px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
 @media (max-width: 420px) { .product-grid { grid-template-columns: 1fr; } }
 
+/* ===================== ARABES INTRO & TABS ===================== */
+.arabes-intro {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--clr-muted);
+}
+.categoria-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.categoria-tabs::-webkit-scrollbar { display: none; }
+.categoria-tab {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 12px 24px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  color: var(--clr-muted);
+  transition: border-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+.categoria-tab:hover { color: var(--clr-dark); }
+.categoria-tab.active {
+  border-bottom-color: var(--clr-gold);
+  color: var(--clr-dark);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1023px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .products-grid { grid-template-columns: 1fr; } }
+.section-cta-wrap {
+  text-align: center;
+  margin-top: 56px;
+}
+
 /* ===================== BANNER SÓ NO BRASIL ===================== */
 #sonobrasil {
   position: relative; background: var(--clr-dark); overflow: hidden;

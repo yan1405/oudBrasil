@@ -137,75 +137,126 @@
       <h2 class="t-h2">Coleção Árabe</h2>
       <p class="section-desc">Ouds raros, bakhoor artesanal e attars de autor — a essência milenar do Oriente reimaginada para o Brasil.</p>
     </div>
-    <div class="product-grid">
+    <p class="arabes-intro">O oud é a matéria-prima mais valiosa da perfumaria oriental. Extraído do cerne de árvores Aquilaria infectadas por um fungo raro, seu óleo pode custar mais que ouro. Bakhoor são pastilhas aromáticas queimadas em braseiros para perfumar ambientes. Attar é a essência pura, sem álcool, extraída por destilação a vapor — uma tradição de mais de mil anos.</p>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/arab1/600/800" alt="Royal Oud Noir" loading="lazy" />
-          <span class="product-badge badge-gold">Exclusivo</span>
-          <button class="btn-favorite" data-id="arab1" data-name="Royal Oud Noir" data-price="890" data-img="https://picsum.photos/seed/arab1/600/800" aria-label="Favoritar Royal Oud Noir">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+    <div class="categoria-tabs" id="arabes-tabs">
+      <button class="categoria-tab active" data-tab="todos">Todos</button>
+      <button class="categoria-tab" data-tab="ouds">Ouds</button>
+      <button class="categoria-tab" data-tab="attars">Attars</button>
+      <button class="categoria-tab" data-tab="bakhoor">Bakhoor</button>
+      <button class="categoria-tab" data-tab="oleos">Perfumes em Óleo</button>
+    </div>
+
+    <div class="products-grid" id="arabes-grid">
+
+      <div class="product-card" data-categoria="ouds">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/royaloud/400/500" alt="Royal Oud" class="product-card-img" />
+          <button class="btn-favorite" data-id="royal-oud" data-name="Royal Oud" data-price="890" data-img="https://picsum.photos/seed/royaloud/400/500" aria-label="Favoritar Royal Oud">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Orientais · Amadeirados</p>
-          <h3 class="product-name">Royal Oud Noir</h3>
-          <p class="product-price"><span>R$</span>890,00</p>
-          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="royal-oud">Ver detalhes</button>
-          <button class="btn btn-primary btn-add-cart" data-id="arab1" data-name="Royal Oud Noir" data-price="890" data-img="https://picsum.photos/seed/arab1/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Oud · Emirados Árabes</p>
+          <h3 class="product-card-name">Royal Oud</h3>
+          <p class="product-card-price">R$ 890,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="royal-oud">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/arab2/600/800" alt="Attar Al Amani" loading="lazy" />
-          <span class="product-badge badge-dark">Mais vendido</span>
-          <button class="btn-favorite" data-id="arab2" data-name="Attar Al Amani" data-price="640" data-img="https://picsum.photos/seed/arab2/600/800" aria-label="Favoritar Attar Al Amani">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-categoria="attars">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/attar/400/500" alt="Attar Al Ward" class="product-card-img" />
+          <button class="btn-favorite" data-id="attar-al-ward" data-name="Attar Al Ward" data-price="650" data-img="https://picsum.photos/seed/attar/400/500" aria-label="Favoritar Attar Al Ward">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Florais · Orientais</p>
-          <h3 class="product-name">Attar Al Amani</h3>
-          <p class="product-price"><span>R$</span>640,00</p>
-          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="attar-al-ward">Ver detalhes</button>
-          <button class="btn btn-primary btn-add-cart" data-id="arab2" data-name="Attar Al Amani" data-price="640" data-img="https://picsum.photos/seed/arab2/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Attar · Arábia Saudita</p>
+          <h3 class="product-card-name">Attar Al Ward</h3>
+          <p class="product-card-price">R$ 650,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="attar-al-ward">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/arab3/600/800" alt="Bakhoor Rasmi" loading="lazy" />
-          <button class="btn-favorite" data-id="arab3" data-name="Bakhoor Rasmi" data-price="450" data-img="https://picsum.photos/seed/arab3/600/800" aria-label="Favoritar Bakhoor Rasmi">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-categoria="bakhoor">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/bakhoor/400/500" alt="Bakhoor Sultani" class="product-card-img" />
+          <button class="btn-favorite" data-id="bakhoor-sultani" data-name="Bakhoor Sultani" data-price="420" data-img="https://picsum.photos/seed/bakhoor/400/500" aria-label="Favoritar Bakhoor Sultani">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Amadeirados</p>
-          <h3 class="product-name">Bakhoor Rasmi</h3>
-          <p class="product-price"><span>R$</span>450,00</p>
-          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="bakhoor-sultani">Ver detalhes</button>
-          <button class="btn btn-primary btn-add-cart" data-id="arab3" data-name="Bakhoor Rasmi" data-price="450" data-img="https://picsum.photos/seed/arab3/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Bakhoor · Omã</p>
+          <h3 class="product-card-name">Bakhoor Sultani</h3>
+          <p class="product-card-price">R$ 420,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-sultani">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/arab4/600/800" alt="Oud al Layl" loading="lazy" />
-          <span class="product-badge badge-gold">Novo</span>
-          <button class="btn-favorite" data-id="arab4" data-name="Oud al Layl" data-price="1150" data-img="https://picsum.photos/seed/arab4/600/800" aria-label="Favoritar Oud al Layl">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-categoria="ouds">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/blackoud/400/500" alt="Black Oud" class="product-card-img" />
+          <button class="btn-favorite" data-id="black-oud" data-name="Black Oud" data-price="980" data-img="https://picsum.photos/seed/blackoud/400/500" aria-label="Favoritar Black Oud">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Orientais</p>
-          <h3 class="product-name">Oud al Layl</h3>
-          <p class="product-price"><span>R$</span>1.150,00</p>
-          <button class="btn btn-ghost" style="font-size:10px; padding:10px 20px;" data-modal-id="black-oud">Ver detalhes</button>
-          <button class="btn btn-primary btn-add-cart" data-id="arab4" data-name="Oud al Layl" data-price="1150" data-img="https://picsum.photos/seed/arab4/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Oud · Emirados Árabes</p>
+          <h3 class="product-card-name">Black Oud</h3>
+          <p class="product-card-price">R$ 980,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="black-oud">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
+      <div class="product-card" data-categoria="oleos">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/oudoleo/400/500" alt="Oud em Óleo Puro" class="product-card-img" />
+          <button class="btn-favorite" data-id="oud-oleo-puro" data-name="Oud em Óleo Puro" data-price="1200" data-img="https://picsum.photos/seed/oudoleo/400/500" aria-label="Favoritar Oud em Óleo Puro">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Óleo Puro · Camboja</p>
+          <h3 class="product-card-name">Oud em Óleo Puro</h3>
+          <p class="product-card-price">R$ 1.200,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="oud-oleo-puro">Ver detalhes</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-categoria="attars">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/attarmusk/400/500" alt="Attar Musk Al Tahara" class="product-card-img" />
+          <button class="btn-favorite" data-id="attar-musk" data-name="Attar Musk Al Tahara" data-price="480" data-img="https://picsum.photos/seed/attarmusk/400/500" aria-label="Favoritar Attar Musk Al Tahara">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Attar · Índia</p>
+          <h3 class="product-card-name">Attar Musk Al Tahara</h3>
+          <p class="product-card-price">R$ 480,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="attar-musk">Ver detalhes</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-categoria="ouds">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/oudrose/400/500" alt="Oud Rose" class="product-card-img" />
+          <button class="btn-favorite" data-id="oud-rose" data-name="Oud Rose" data-price="760" data-img="https://picsum.photos/seed/oudrose/400/500" aria-label="Favoritar Oud Rose">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Oud · Marrocos</p>
+          <h3 class="product-card-name">Oud Rose</h3>
+          <p class="product-card-price">R$ 760,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="oud-rose">Ver detalhes</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-categoria="bakhoor">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/bakhooramber/400/500" alt="Bakhoor Amber Nights" class="product-card-img" />
+          <button class="btn-favorite" data-id="bakhoor-amber" data-name="Bakhoor Amber Nights" data-price="390" data-img="https://picsum.photos/seed/bakhooramber/400/500" aria-label="Favoritar Bakhoor Amber Nights">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Bakhoor · Arábia Saudita</p>
+          <h3 class="product-card-name">Bakhoor Amber Nights</h3>
+          <p class="product-card-price">R$ 390,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="bakhoor-amber">Ver detalhes</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-cta-wrap">
+      <button class="btn btn-ghost">Ver toda a coleção árabe</button>
     </div>
   </div>
 </section>
