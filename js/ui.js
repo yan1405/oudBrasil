@@ -58,3 +58,46 @@ document.querySelectorAll('.categoria-tabs').forEach(tabsEl => {
     });
   });
 });
+
+// ===================== FILTROS DE IMPORTADOS =====================
+(function () {
+  const grid = document.getElementById('importados-grid');
+  if (!grid) return;
+
+  let marcaAtiva = 'todos';
+  let precoAtivo = 'todos';
+
+  function aplicarFiltros() {
+    grid.querySelectorAll('.product-card').forEach(card => {
+      const marca = card.dataset.marca;
+      const preco = parseInt(card.dataset.precoVal, 10);
+
+      const passaMarca = marcaAtiva === 'todos' || marca === marcaAtiva;
+
+      let passaPreco = true;
+      if (precoAtivo === '400-800') passaPreco = preco >= 400 && preco <= 800;
+      else if (precoAtivo === '800-1200') passaPreco = preco > 800 && preco <= 1200;
+      else if (precoAtivo === '1200+') passaPreco = preco > 1200;
+
+      card.style.display = passaMarca && passaPreco ? '' : 'none';
+    });
+  }
+
+  document.getElementById('filtro-marca')?.addEventListener('click', e => {
+    const btn = e.target.closest('.filtro-btn');
+    if (!btn) return;
+    document.querySelectorAll('#filtro-marca .filtro-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    marcaAtiva = btn.dataset.marca;
+    aplicarFiltros();
+  });
+
+  document.getElementById('filtro-preco')?.addEventListener('click', e => {
+    const btn = e.target.closest('.filtro-btn');
+    if (!btn) return;
+    document.querySelectorAll('#filtro-preco .filtro-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    precoAtivo = btn.dataset.preco;
+    aplicarFiltros();
+  });
+})();

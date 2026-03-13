@@ -287,108 +287,155 @@
       <h2 class="t-h2">Importados</h2>
       <p class="section-desc">Criações das mais renomadas casas de perfumaria do mundo, chegando direto ao seu alcance.</p>
     </div>
-    <div class="product-grid" style="grid-template-columns: repeat(3,1fr);">
+    <p class="importados-intro">Trazemos as maiores casas de perfumaria do mundo até você. Cada frasco é importado diretamente de distribuidores oficiais, com autenticidade garantida e rastreabilidade de origem.</p>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp1/600/800" alt="Lumière Blanche" loading="lazy" />
-          <span class="product-badge badge-dark">Importado</span>
-          <button class="btn-favorite" data-id="imp1" data-name="Lumière Blanche" data-price="1290" data-img="https://picsum.photos/seed/imp1/600/800" aria-label="Favoritar Lumière Blanche">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+    <div class="importados-filtros">
+      <div class="filtros-grupo">
+        <span class="filtros-label">Marca</span>
+        <div class="filtros-opcoes" id="filtro-marca">
+          <button class="filtro-btn active" data-marca="todos">Todos</button>
+          <button class="filtro-btn" data-marca="mfk">Maison Francis Kurkdjian</button>
+          <button class="filtro-btn" data-marca="amouage">Amouage</button>
+          <button class="filtro-btn" data-marca="xerjoff">Xerjoff</button>
+          <button class="filtro-btn" data-marca="tomford">Tom Ford</button>
+        </div>
+      </div>
+      <div class="filtros-grupo">
+        <span class="filtros-label">Faixa de preço</span>
+        <div class="filtros-opcoes" id="filtro-preco">
+          <button class="filtro-btn active" data-preco="todos">Todos</button>
+          <button class="filtro-btn" data-preco="400-800">R$ 400 a R$ 800</button>
+          <button class="filtro-btn" data-preco="800-1200">R$ 800 a R$ 1.200</button>
+          <button class="filtro-btn" data-preco="1200+">R$ 1.200+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid" id="importados-grid">
+
+      <div class="product-card" data-marca="mfk" data-preco-val="980">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/baccarat/400/500" alt="Baccarat Rouge 540" class="product-card-img" />
+          <span class="product-badge-exclusive">Distribuição exclusiva</span>
+          <button class="btn-favorite" data-id="baccarat-rouge" data-name="Baccarat Rouge 540" data-price="980" data-img="https://picsum.photos/seed/baccarat/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Florais · Frescos</p>
-          <h3 class="product-name">Lumière Blanche</h3>
-          <p class="product-price"><span>R$</span>1.290,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp1" data-name="Lumière Blanche" data-price="1290" data-img="https://picsum.photos/seed/imp1/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
+          <h3 class="product-card-name">Baccarat Rouge 540</h3>
+          <p class="product-card-price">R$ 980,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="baccarat-rouge">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp2/600/800" alt="Noir Absolu" loading="lazy" />
-          <span class="product-badge badge-gold">Best seller</span>
-          <button class="btn-favorite" data-id="imp2" data-name="Noir Absolu" data-price="1580" data-img="https://picsum.photos/seed/imp2/600/800" aria-label="Favoritar Noir Absolu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-marca="amouage" data-preco-val="1350">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/interlude/400/500" alt="Interlude Man" class="product-card-img" />
+          <button class="btn-favorite" data-id="interlude-man" data-name="Interlude Man" data-price="1350" data-img="https://picsum.photos/seed/interlude/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Amadeirados · Orientais</p>
-          <h3 class="product-name">Noir Absolu</h3>
-          <p class="product-price"><span>R$</span>1.580,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp2" data-name="Noir Absolu" data-price="1580" data-img="https://picsum.photos/seed/imp2/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Amouage · EDP</p>
+          <h3 class="product-card-name">Interlude Man</h3>
+          <p class="product-card-price">R$ 1.350,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="interlude-man">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp3/600/800" alt="Santal Élite" loading="lazy" />
-          <button class="btn-favorite" data-id="imp3" data-name="Santal Élite" data-price="980" data-img="https://picsum.photos/seed/imp3/600/800" aria-label="Favoritar Santal Élite">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-marca="xerjoff" data-preco-val="1100">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/naxos/400/500" alt="Naxos" class="product-card-img" />
+          <button class="btn-favorite" data-id="naxos" data-name="Naxos" data-price="1100" data-img="https://picsum.photos/seed/naxos/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Amadeirados</p>
-          <h3 class="product-name">Santal Élite</h3>
-          <p class="product-price"><span>R$</span>980,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp3" data-name="Santal Élite" data-price="980" data-img="https://picsum.photos/seed/imp3/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Xerjoff · EDP</p>
+          <h3 class="product-card-name">Naxos</h3>
+          <p class="product-card-price">R$ 1.100,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="naxos">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp4/600/800" alt="Aqua Divina" loading="lazy" />
-          <button class="btn-favorite" data-id="imp4" data-name="Aqua Divina" data-price="760" data-img="https://picsum.photos/seed/imp4/600/800" aria-label="Favoritar Aqua Divina">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-marca="tomford" data-preco-val="720">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/oudwood/400/500" alt="Oud Wood" class="product-card-img" />
+          <button class="btn-favorite" data-id="oud-wood-tf" data-name="Oud Wood" data-price="720" data-img="https://picsum.photos/seed/oudwood/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Frescos · Cítricos</p>
-          <h3 class="product-name">Aqua Divina</h3>
-          <p class="product-price"><span>R$</span>760,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp4" data-name="Aqua Divina" data-price="760" data-img="https://picsum.photos/seed/imp4/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Tom Ford · EDP</p>
+          <h3 class="product-card-name">Oud Wood</h3>
+          <p class="product-card-price">R$ 720,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="oud-wood-tf">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp5/600/800" alt="Rose de Minuit" loading="lazy" />
-          <span class="product-badge badge-moss">Só no Brasil</span>
-          <button class="btn-favorite" data-id="imp5" data-name="Rose de Minuit" data-price="1120" data-img="https://picsum.photos/seed/imp5/600/800" aria-label="Favoritar Rose de Minuit">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-marca="mfk" data-preco-val="860">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/grand/400/500" alt="Grand Soir" class="product-card-img" />
+          <button class="btn-favorite" data-id="grand-soir" data-name="Grand Soir" data-price="860" data-img="https://picsum.photos/seed/grand/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Florais</p>
-          <h3 class="product-name">Rose de Minuit</h3>
-          <p class="product-price"><span>R$</span>1.120,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp5" data-name="Rose de Minuit" data-price="1120" data-img="https://picsum.photos/seed/imp5/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Maison Francis Kurkdjian · EDP</p>
+          <h3 class="product-card-name">Grand Soir</h3>
+          <p class="product-card-price">R$ 860,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="grand-soir">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
-      <article class="product-card reveal">
-        <div class="product-card-img">
-          <img src="https://picsum.photos/seed/imp6/600/800" alt="Gourmand Secret" loading="lazy" />
-          <span class="product-badge badge-dark">Novo</span>
-          <button class="btn-favorite" data-id="imp6" data-name="Gourmand Secret" data-price="870" data-img="https://picsum.photos/seed/imp6/600/800" aria-label="Favoritar Gourmand Secret">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+      <div class="product-card" data-marca="amouage" data-preco-val="1280">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/reflection/400/500" alt="Reflection Man" class="product-card-img" />
+          <button class="btn-favorite" data-id="reflection-man" data-name="Reflection Man" data-price="1280" data-img="https://picsum.photos/seed/reflection/400/500" aria-label="Favoritar">&#9825;</button>
         </div>
         <div class="product-card-info">
-          <p class="product-category">Gourmand</p>
-          <h3 class="product-name">Gourmand Secret</h3>
-          <p class="product-price"><span>R$</span>870,00</p>
-          <a href="#" class="btn btn-ghost" style="font-size:10px; padding:10px 20px;">Ver detalhes</a>
-          <button class="btn btn-primary btn-add-cart" data-id="imp6" data-name="Gourmand Secret" data-price="870" data-img="https://picsum.photos/seed/imp6/600/800">Adicionar ao carrinho</button>
+          <p class="product-card-category">Amouage · EDP</p>
+          <h3 class="product-card-name">Reflection Man</h3>
+          <p class="product-card-price">R$ 1.280,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="reflection-man">Ver detalhes</button>
         </div>
-      </article>
+      </div>
 
+      <div class="product-card" data-marca="xerjoff" data-preco-val="950">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/casamorati/400/500" alt="Italica" class="product-card-img" />
+          <button class="btn-favorite" data-id="italica" data-name="Italica" data-price="950" data-img="https://picsum.photos/seed/casamorati/400/500" aria-label="Favoritar">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Xerjoff · EDP</p>
+          <h3 class="product-card-name">Italica</h3>
+          <p class="product-card-price">R$ 950,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="italica">Ver detalhes</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-marca="tomford" data-preco-val="650">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/tobacco/400/500" alt="Tobacco Vanille" class="product-card-img" />
+          <button class="btn-favorite" data-id="tobacco-vanille" data-name="Tobacco Vanille" data-price="650" data-img="https://picsum.photos/seed/tobacco/400/500" aria-label="Favoritar">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Tom Ford · EDP</p>
+          <h3 class="product-card-name">Tobacco Vanille</h3>
+          <p class="product-card-price">R$ 650,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="tobacco-vanille">Ver detalhes</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-marca="mfk" data-preco-val="1450">
+        <div class="product-card-img-wrap">
+          <img src="https://picsum.photos/seed/oud540/400/500" alt="Oud Satin Mood" class="product-card-img" />
+          <span class="product-badge-exclusive">Distribuição exclusiva</span>
+          <button class="btn-favorite" data-id="oud-satin-mood" data-name="Oud Satin Mood" data-price="1450" data-img="https://picsum.photos/seed/oud540/400/500" aria-label="Favoritar">&#9825;</button>
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-category">Maison Francis Kurkdjian · Extrait</p>
+          <h3 class="product-card-name">Oud Satin Mood</h3>
+          <p class="product-card-price">R$ 1.450,00</p>
+          <button class="btn btn-primary product-card-cta" data-modal-id="oud-satin-mood">Ver detalhes</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-cta-wrap">
+      <button class="btn btn-ghost">Ver todos os importados</button>
     </div>
   </div>
 </section>
