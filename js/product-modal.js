@@ -180,34 +180,6 @@
       thumbs: ['https://picsum.photos/seed/oud5401/200/200','https://picsum.photos/seed/oud5402/200/200','https://picsum.photos/seed/oud5403/200/200'],
       notes: { top: 'Rosa, Oud', heart: 'Baunilha, Âmbar', base: 'Almíscar, Benjoim' },
       description: 'Oud Satin Mood é a interpretação de Francis Kurkdjian do oud árabe com sofisticação parisiense. A rosa búlgara envolve o oud em um véu de baunilha e âmbar, criando uma das composições mais sensuais e luxuosas da perfumaria contemporânea.'
-    },
-    {
-      id: 'amazonia-noir', name: 'Amazônia Noir', category: 'Só no Brasil · Nacional', origin: 'Brasil', price: 590, volumes: ['50ml', '100ml'],
-      img: 'https://picsum.photos/seed/amazonia/600/800',
-      thumbs: ['https://picsum.photos/seed/amazonia1/200/200','https://picsum.photos/seed/amazonia2/200/200','https://picsum.photos/seed/amazonia3/200/200'],
-      notes: { top: 'Priprioca, Cumaru', heart: 'Andiroba, Rosa', base: 'Breu branco, Patchouli' },
-      description: 'Amazônia Noir é uma celebração da biodiversidade brasileira em forma de perfume. A priprioca, raiz amazônica com aroma terroso e defumado, encontra o cumaru e o breu branco em uma composição que é ao mesmo tempo selvagem e sofisticada.'
-    },
-    {
-      id: 'cerrado-gold', name: 'Cerrado Gold', category: 'Só no Brasil · Nacional', origin: 'Brasil', price: 480, volumes: ['50ml', '100ml'],
-      img: 'https://picsum.photos/seed/cerrado/600/800',
-      thumbs: ['https://picsum.photos/seed/cerrado1/200/200','https://picsum.photos/seed/cerrado2/200/200','https://picsum.photos/seed/cerrado3/200/200'],
-      notes: { top: 'Pequi, Baunilha do Cerrado', heart: 'Ipê amarelo, Âmbar', base: 'Madeira de lei, Tonka brasileira' },
-      description: 'Cerrado Gold captura a essência do bioma mais antigo das Américas. O pequi, fruto símbolo do cerrado, abre a composição com sua característica cremosa e levemente animal, enquanto o ipê amarelo traz frescor floral único ao Brasil.'
-    },
-    {
-      id: 'pantanal-oud', name: 'Pantanal Oud', category: 'Só no Brasil · Nacional', origin: 'Brasil', price: 720, volumes: ['50ml', '100ml'],
-      img: 'https://picsum.photos/seed/pantanal/600/800',
-      thumbs: ['https://picsum.photos/seed/pantanal1/200/200','https://picsum.photos/seed/pantanal2/200/200','https://picsum.photos/seed/pantanal3/200/200'],
-      notes: { top: 'Copaíba, Cedro brasileiro', heart: 'Oud, Jacarandá', base: 'Terra molhada, Âmbar negro' },
-      description: 'Pantanal Oud é a fusão entre a tradição oriental do oud e a riqueza madeireira do Brasil. O óleo de copaíba, usado há séculos pela medicina indígena, encontra o jacarandá nativo em uma composição amadeirada de profundidade única.'
-    },
-    {
-      id: 'caatinga-branca', name: 'Caatinga Branca', category: 'Só no Brasil · Nacional', origin: 'Brasil', price: 420, volumes: ['50ml', '100ml'],
-      img: 'https://picsum.photos/seed/caatinga/600/800',
-      thumbs: ['https://picsum.photos/seed/caatinga1/200/200','https://picsum.photos/seed/caatinga2/200/200','https://picsum.photos/seed/caatinga3/200/200'],
-      notes: { top: 'Mandacaru, Aroeira', heart: 'Umburana, Imbuia', base: 'Terra branca, Almíscar seco' },
-      description: 'Caatinga Branca nasce da resiliência do semiárido brasileiro. A umburana, árvore sagrada do nordeste com aroma de baunilha e especiaria, conduz uma composição árida e poética que evoca a beleza única da caatinga após a chuva.'
     }
   ];
 
