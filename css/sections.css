@@ -158,6 +158,41 @@
   pointer-events: none;
 }
 
+/* ===================== SÓ NO BRASIL — PRODUCTS ===================== */
+.sonobrasil-intro {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--clr-muted);
+}
+.sonobrasil-grid .product-card-dark {
+  background: #1a1a1a;
+}
+.sonobrasil-grid .product-card-dark .product-card-name {
+  color: var(--clr-white);
+}
+.sonobrasil-grid .product-card-dark .product-card-category {
+  color: var(--clr-muted);
+}
+.sonobrasil-grid .product-card-dark .product-card-price {
+  color: var(--clr-gold);
+}
+.product-badge-sonobrasil {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4A6741;
+  background: none;
+  pointer-events: none;
+  font-weight: 500;
+}
+
 /* ===================== BANNER SÓ NO BRASIL ===================== */
 #sonobrasil {
   position: relative; background: var(--clr-dark); overflow: hidden;
