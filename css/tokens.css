@@ -1,0 +1,13 @@
+/* ===================== DESIGN TOKENS ===================== */
+:root {
+  --clr-dark: #0D0D0D;
+  --clr-bg: #F5F1EB;
+  --clr-white: #FFFFFF;
+  --clr-gold: #C8A96E;
+  --clr-moss: #4A6741;
+  --clr-indigo: #2C4A6E;
+  --clr-border: #E5E0D8;
+  --clr-muted: #9A948E;
+  --max-w: 1280px;
+  --gap: 32px;
+}
