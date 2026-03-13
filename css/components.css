@@ -348,3 +348,74 @@
   .favorites-drawer { width: 100%; }
   .favorites-drawer-header, .favorites-drawer-items { padding-left: 20px; padding-right: 20px; }
 }
+
+/* ===================== SEARCH OVERLAY ===================== */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(10, 10, 10, 0.95);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.search-overlay.open { opacity: 1; visibility: visible; }
+
+.search-overlay-close {
+  position: absolute; top: 24px; right: 32px;
+  background: none; border: none; cursor: pointer;
+  font-size: 36px; line-height: 1;
+  color: var(--clr-white);
+  transition: color 0.3s;
+}
+.search-overlay-close:hover { color: var(--clr-gold); }
+
+.search-overlay-inner {
+  width: 100%; max-width: 640px;
+  padding: 0 24px;
+}
+
+.search-input {
+  width: 100%;
+  background: transparent; border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 300;
+  color: var(--clr-white);
+  padding: 16px 0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.search-input::placeholder { color: rgba(255, 255, 255, 0.4); }
+.search-input:focus { border-bottom-color: var(--clr-gold); }
+
+.search-suggestions {
+  list-style: none; margin: 0; padding: 24px 0 0 0;
+}
+.search-suggestions li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.search-suggestions li a {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.search-suggestions li a:hover { color: var(--clr-gold); }
+.search-suggestions li a .search-price {
+  font-size: 13px; font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.search-no-results {
+  padding: 24px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .search-input { font-size: 24px; }
+  .search-overlay-close { top: 16px; right: 20px; }
+}
