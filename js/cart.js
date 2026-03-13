@@ -187,4 +187,7 @@
     // Initial badge update
     updateCartBadge();
   });
+
+  // Expose addToCart globally for favorites.js integration
+  window.OudBrasilCart = { addToCart: addToCart, openCartDrawer: openCartDrawer };
 })();

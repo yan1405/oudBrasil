@@ -33,8 +33,11 @@
       <button aria-label="Buscar">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
-      <button aria-label="Favoritos">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <button aria-label="Favoritos" id="favorites-icon">
+        <span class="icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="favorites-badge" id="favorites-badge">0</span>
+        </span>
       </button>
       <button aria-label="Carrinho" id="cart-icon">
         <span class="icon-wrap">
@@ -140,6 +143,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/arab1/600/800" alt="Royal Oud Noir" loading="lazy" />
           <span class="product-badge badge-gold">Exclusivo</span>
+          <button class="btn-favorite" data-id="arab1" data-name="Royal Oud Noir" data-price="890" data-img="https://picsum.photos/seed/arab1/600/800" aria-label="Favoritar Royal Oud Noir">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Orientais · Amadeirados</p>
@@ -154,6 +160,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/arab2/600/800" alt="Attar Al Amani" loading="lazy" />
           <span class="product-badge badge-dark">Mais vendido</span>
+          <button class="btn-favorite" data-id="arab2" data-name="Attar Al Amani" data-price="640" data-img="https://picsum.photos/seed/arab2/600/800" aria-label="Favoritar Attar Al Amani">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Florais · Orientais</p>
@@ -167,6 +176,9 @@
       <article class="product-card reveal">
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/arab3/600/800" alt="Bakhoor Rasmi" loading="lazy" />
+          <button class="btn-favorite" data-id="arab3" data-name="Bakhoor Rasmi" data-price="450" data-img="https://picsum.photos/seed/arab3/600/800" aria-label="Favoritar Bakhoor Rasmi">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Amadeirados</p>
@@ -181,6 +193,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/arab4/600/800" alt="Oud al Layl" loading="lazy" />
           <span class="product-badge badge-gold">Novo</span>
+          <button class="btn-favorite" data-id="arab4" data-name="Oud al Layl" data-price="1150" data-img="https://picsum.photos/seed/arab4/600/800" aria-label="Favoritar Oud al Layl">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Orientais</p>
@@ -227,6 +242,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp1/600/800" alt="Lumière Blanche" loading="lazy" />
           <span class="product-badge badge-dark">Importado</span>
+          <button class="btn-favorite" data-id="imp1" data-name="Lumière Blanche" data-price="1290" data-img="https://picsum.photos/seed/imp1/600/800" aria-label="Favoritar Lumière Blanche">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Florais · Frescos</p>
@@ -241,6 +259,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp2/600/800" alt="Noir Absolu" loading="lazy" />
           <span class="product-badge badge-gold">Best seller</span>
+          <button class="btn-favorite" data-id="imp2" data-name="Noir Absolu" data-price="1580" data-img="https://picsum.photos/seed/imp2/600/800" aria-label="Favoritar Noir Absolu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Amadeirados · Orientais</p>
@@ -254,6 +275,9 @@
       <article class="product-card reveal">
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp3/600/800" alt="Santal Élite" loading="lazy" />
+          <button class="btn-favorite" data-id="imp3" data-name="Santal Élite" data-price="980" data-img="https://picsum.photos/seed/imp3/600/800" aria-label="Favoritar Santal Élite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Amadeirados</p>
@@ -267,6 +291,9 @@
       <article class="product-card reveal">
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp4/600/800" alt="Aqua Divina" loading="lazy" />
+          <button class="btn-favorite" data-id="imp4" data-name="Aqua Divina" data-price="760" data-img="https://picsum.photos/seed/imp4/600/800" aria-label="Favoritar Aqua Divina">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Frescos · Cítricos</p>
@@ -281,6 +308,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp5/600/800" alt="Rose de Minuit" loading="lazy" />
           <span class="product-badge badge-moss">Só no Brasil</span>
+          <button class="btn-favorite" data-id="imp5" data-name="Rose de Minuit" data-price="1120" data-img="https://picsum.photos/seed/imp5/600/800" aria-label="Favoritar Rose de Minuit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Florais</p>
@@ -295,6 +325,9 @@
         <div class="product-card-img">
           <img src="https://picsum.photos/seed/imp6/600/800" alt="Gourmand Secret" loading="lazy" />
           <span class="product-badge badge-dark">Novo</span>
+          <button class="btn-favorite" data-id="imp6" data-name="Gourmand Secret" data-price="870" data-img="https://picsum.photos/seed/imp6/600/800" aria-label="Favoritar Gourmand Secret">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card-info">
           <p class="product-category">Gourmand</p>
@@ -430,6 +463,16 @@
   </div>
 </div>
 <div id="cart-backdrop" class="cart-backdrop"></div>
+
+<!-- Favorites Drawer -->
+<div id="favorites-drawer" class="favorites-drawer" aria-hidden="true">
+  <div class="favorites-drawer-header">
+    <span class="favorites-drawer-title">Lista de Desejos</span>
+    <button class="favorites-drawer-close" id="favorites-close" aria-label="Fechar favoritos">&times;</button>
+  </div>
+  <div class="favorites-drawer-items" id="favorites-items-list"></div>
+</div>
+<div id="favorites-backdrop" class="favorites-backdrop"></div>
 
 <script src="js/ui.js"></script>
 <script src="js/cart.js"></script>
