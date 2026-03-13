@@ -30,7 +30,7 @@
 
     <!-- Ícones -->
     <div class="nav-icons">
-      <button aria-label="Buscar">
+      <button aria-label="Buscar" id="search-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
       <button aria-label="Favoritos" id="favorites-icon">
@@ -473,6 +473,15 @@
   <div class="favorites-drawer-items" id="favorites-items-list"></div>
 </div>
 <div id="favorites-backdrop" class="favorites-backdrop"></div>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="search-overlay" aria-hidden="true">
+  <button class="search-overlay-close" id="search-close" aria-label="Fechar busca">&times;</button>
+  <div class="search-overlay-inner">
+    <input type="text" id="search-input" class="search-input" placeholder="O que você procura?" autocomplete="off" />
+    <ul class="search-suggestions" id="search-suggestions"></ul>
+  </div>
+</div>
 
 <script src="js/ui.js"></script>
 <script src="js/cart.js"></script>
