@@ -178,3 +178,39 @@ document.querySelectorAll('.categoria-tabs').forEach(tabsEl => {
   updateTrack();
   startAutoplay();
 })();
+
+// ===================== NEWSLETTER =====================
+(function () {
+  const form = document.getElementById('newsletter-form');
+  const feedback = document.getElementById('newsletter-feedback');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regex.test(email)) {
+      feedback.textContent = 'Por favor, insira um e-mail válido.';
+      feedback.style.color = '#e07070';
+      return;
+    }
+
+    try {
+      const inscritos = JSON.parse(localStorage.getItem('oudbrasil_newsletter') || '[]');
+      if (inscritos.includes(email)) {
+        feedback.textContent = 'Este e-mail já está cadastrado no Clube Oud Brasil.';
+        feedback.style.color = 'rgba(255,255,255,0.5)';
+        return;
+      }
+      inscritos.push(email);
+      localStorage.setItem('oudbrasil_newsletter', JSON.stringify(inscritos));
+      feedback.textContent = 'Bem-vindo ao Clube Oud Brasil. Verifique seu e-mail.';
+      feedback.style.color = 'var(--clr-gold)';
+      form.reset();
+    } catch (err) {
+      feedback.textContent = 'Erro ao processar. Tente novamente.';
+      feedback.style.color = '#e07070';
+    }
+  });
+})();
