@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minha Conta — Oud Brasil</title>
   <meta name="description"
-    content="Entre na sua conta ou crie uma nova para acessar seus pedidos e favoritos no Oud Brasil." />
+    content="Área do cliente Oud Brasil. Acompanhe pedidos, gerencie endereços e atualize seus dados." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/pages/conta.css">
+  <link rel="stylesheet" href="css/pages/minha-conta.css">
 </head>
 
 <body>
@@ -66,60 +66,106 @@
     </div>
   </nav>
 
-  <!-- SEÇÃO: CONTA (LOGIN / CADASTRO) -->
-  <section class="conta-page">
+  <!-- ÁREA DO CLIENTE -->
+  <section class="minha-conta-page">
     <div class="container">
-      <div class="conta-inner">
+      <div class="minha-conta-layout">
 
-        <!-- Tabs login/cadastro -->
-        <div class="conta-tabs">
-          <button class="conta-tab active" data-tab="login">Entrar</button>
-          <button class="conta-tab" data-tab="cadastro">Criar conta</button>
-        </div>
-
-        <!-- Login -->
-        <div class="conta-form-wrap active" id="form-login">
-          <h1 class="conta-title">Bem-vindo de volta</h1>
-          <p class="conta-subtitle">Entre na sua conta para acessar seus pedidos e favoritos.</p>
-          <div class="conta-form">
-            <div class="form-grupo">
-              <label class="form-label">E-mail</label>
-              <input type="email" class="form-input" placeholder="seu@email.com" />
-            </div>
-            <div class="form-grupo">
-              <label class="form-label">Senha</label>
-              <input type="password" class="form-input" placeholder="Sua senha" />
-            </div>
-            <button class="btn-primary conta-submit">Entrar</button>
-            <button class="conta-esqueci">Esqueci minha senha</button>
+        <!-- Sidebar de navegação -->
+        <aside class="minha-conta-sidebar">
+          <div class="minha-conta-perfil">
+            <p class="minha-conta-nome">Olá, Ricardo</p>
+            <p class="minha-conta-email">ricardo@email.com</p>
           </div>
-        </div>
+          <nav class="minha-conta-nav">
+            <button class="mc-nav-btn active" data-section="pedidos">Meus pedidos</button>
+            <button class="mc-nav-btn" data-section="favoritos">Lista de desejos</button>
+            <button class="mc-nav-btn" data-section="enderecos">Endereços</button>
+            <button class="mc-nav-btn" data-section="dados">Meus dados</button>
+            <button class="mc-nav-btn mc-nav-sair">Sair</button>
+          </nav>
+        </aside>
 
-        <!-- Cadastro -->
-        <div class="conta-form-wrap" id="form-cadastro">
-          <h1 class="conta-title">Criar conta</h1>
-          <p class="conta-subtitle">Junte-se ao Clube Oud Brasil e ganhe 10% off na primeira compra.</p>
-          <div class="conta-form">
-            <div class="form-grupo">
-              <label class="form-label">Nome completo</label>
-              <input type="text" class="form-input" placeholder="Seu nome" />
+        <!-- Conteúdo principal -->
+        <div class="minha-conta-conteudo">
+
+          <!-- Pedidos -->
+          <div class="mc-section active" id="mc-pedidos">
+            <h2 class="mc-section-title">Meus pedidos</h2>
+            <div class="pedido-card">
+              <div class="pedido-header">
+                <span class="pedido-numero">Pedido #OB-2024-001</span>
+                <span class="pedido-status pedido-status-entregue">Entregue</span>
+              </div>
+              <p class="pedido-data">12 de março de 2024</p>
+              <div class="pedido-itens">
+                <div class="pedido-item">
+                  <img src="https://picsum.photos/seed/royaloud/80/80" alt="Royal Oud" />
+                  <div>
+                    <p class="pedido-item-nome">Royal Oud · 50ml</p>
+                    <p class="pedido-item-preco">R$ 890,00</p>
+                  </div>
+                </div>
+              </div>
+              <p class="pedido-total">Total: R$ 890,00</p>
             </div>
-            <div class="form-grupo">
-              <label class="form-label">E-mail</label>
-              <input type="email" class="form-input" placeholder="seu@email.com" />
+            <div class="pedido-card">
+              <div class="pedido-header">
+                <span class="pedido-numero">Pedido #OB-2024-002</span>
+                <span class="pedido-status pedido-status-transito">Em trânsito</span>
+              </div>
+              <p class="pedido-data">28 de março de 2024</p>
+              <div class="pedido-itens">
+                <div class="pedido-item">
+                  <img src="https://picsum.photos/seed/baccarat/80/80" alt="Baccarat Rouge 540" />
+                  <div>
+                    <p class="pedido-item-nome">Baccarat Rouge 540 · 70ml</p>
+                    <p class="pedido-item-preco">R$ 980,00</p>
+                  </div>
+                </div>
+              </div>
+              <p class="pedido-total">Total: R$ 980,00</p>
             </div>
-            <div class="form-grupo">
-              <label class="form-label">Senha</label>
-              <input type="password" class="form-input" placeholder="Mínimo 8 caracteres" />
-            </div>
-            <div class="form-grupo">
-              <label class="form-label">CEP</label>
-              <input type="text" class="form-input" placeholder="00000-000" maxlength="9" />
-            </div>
-            <button class="btn-primary conta-submit">Criar conta</button>
           </div>
-        </div>
 
+          <!-- Favoritos -->
+          <div class="mc-section" id="mc-favoritos">
+            <h2 class="mc-section-title">Lista de desejos</h2>
+            <p class="mc-empty">Seus favoritos salvos aparecerão aqui. <a href="index.html">Explorar produtos</a></p>
+          </div>
+
+          <!-- Endereços -->
+          <div class="mc-section" id="mc-enderecos">
+            <h2 class="mc-section-title">Endereços salvos</h2>
+            <div class="endereco-card">
+              <p class="endereco-tipo">Casa</p>
+              <p class="endereco-linha">Rua das Flores, 123 · Apto 45</p>
+              <p class="endereco-linha">Jardins · São Paulo, SP · 01401-000</p>
+              <button class="endereco-editar">Editar</button>
+            </div>
+          </div>
+
+          <!-- Dados -->
+          <div class="mc-section" id="mc-dados">
+            <h2 class="mc-section-title">Meus dados</h2>
+            <div class="conta-form">
+              <div class="form-grupo">
+                <label class="form-label">Nome completo</label>
+                <input type="text" class="form-input" value="Ricardo Mendes" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-input" value="ricardo@email.com" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Telefone</label>
+                <input type="tel" class="form-input" value="(11) 99999-9999" />
+              </div>
+              <button class="btn-primary" style="max-width: 200px">Salvar alterações</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -232,7 +278,7 @@
   <script src="js/cart.js"></script>
   <script src="js/favorites.js"></script>
   <script src="js/search.js"></script>
-  <script src="js/conta.js"></script>
+  <script src="js/minha-conta.js"></script>
 </body>
 
 </html>
