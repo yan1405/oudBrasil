@@ -35,6 +35,90 @@
 @media (max-width: 767px) { .familias-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 480px) { .familias-grid { grid-template-columns: repeat(2, 1fr); } }
 
+/* ===================== GIFT SETS ===================== */
+#giftsets {
+  padding: 104px 0;
+  background: var(--clr-bg);
+}
+.giftsets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+.giftset-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-white);
+}
+.giftset-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+.giftset-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.giftset-card:hover .giftset-card-img {
+  transform: scale(1.03);
+}
+.giftset-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-gold);
+  pointer-events: none;
+}
+.giftset-card-info {
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.giftset-card-eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--clr-muted);
+}
+.giftset-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--clr-dark);
+  line-height: 1.2;
+}
+.giftset-card-conteudo {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--clr-muted);
+  flex: 1;
+}
+.giftset-card-price {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--clr-dark);
+}
+.giftset-card-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+@media (max-width: 1023px) {
+  .giftsets-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .giftsets-grid { grid-template-columns: 1fr; }
+}
+
 /* ===================== PRODUTOS SECTION ===================== */
 .produtos-section { padding: 104px 0; }
 .produtos-section.alt-bg { background: var(--clr-white); }
