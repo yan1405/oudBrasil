@@ -214,3 +214,39 @@ document.querySelectorAll('.categoria-tabs').forEach(tabsEl => {
     }
   });
 })();
+
+// ===================== PÁGINA DE PRODUTO — GALERIA E VOLUMES =====================
+(function () {
+  const mainImg = document.getElementById('page-img-main');
+  if (!mainImg) return;
+  document.querySelectorAll('.page-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      mainImg.src = thumb.dataset.src;
+      document.querySelectorAll('.page-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.produto-page-volume-opts .vol-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.produto-page-volume-opts .vol-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  document.querySelector('.produto-page-add-cart')?.addEventListener('click', () => {
+    window.OudBrasilCart?.addToCart({
+      id: 'royal-oud',
+      name: 'Royal Oud',
+      price: 890,
+      img: 'https://picsum.photos/seed/royaloud/600/800'
+    });
+    window.OudBrasilCart?.openCartDrawer();
+  });
+  document.querySelector('.produto-page-add-fav')?.addEventListener('click', () => {
+    window.OudBrasilFavorites?.toggleFavorite({
+      id: 'royal-oud',
+      name: 'Royal Oud',
+      price: 890,
+      img: 'https://picsum.photos/seed/royaloud/600/800'
+    });
+  });
+})();
