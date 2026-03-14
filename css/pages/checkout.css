@@ -1,0 +1,439 @@
+/* ===================== CHECKOUT PAGE ===================== */
+
+/* Navbar simplificada */
+.checkout-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-white);
+}
+
+/* Layout principal */
+.checkout-page {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+}
+
+/* ===================== STEPS ===================== */
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.checkout-step {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-muted);
+  transition: color 0.3s ease;
+}
+
+.checkout-step.active {
+  color: var(--clr-dark);
+}
+
+.checkout-step-divider {
+  color: var(--clr-muted);
+  font-size: 12px;
+}
+
+/* ===================== ETAPAS ===================== */
+
+.checkout-etapa {
+  display: none;
+}
+
+.checkout-etapa.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.checkout-etapa-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--clr-dark);
+  margin-bottom: 32px;
+}
+
+/* ===================== FORM ===================== */
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-grupo-cep {
+  max-width: 160px;
+}
+
+.form-grupo-grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-dark);
+}
+
+.checkout-form .form-input,
+.cartao-form .form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--clr-dark);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.checkout-form .form-input::placeholder,
+.cartao-form .form-input::placeholder {
+  color: var(--clr-muted);
+  font-size: 13px;
+}
+
+.checkout-form .form-input:focus,
+.cartao-form .form-input:focus {
+  border-color: var(--clr-dark);
+}
+
+.checkout-form select.form-input,
+.cartao-form select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239A948E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* Botões */
+.checkout-avancar {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.checkout-nav-btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--clr-dark);
+  background: transparent;
+  border: 1px solid var(--clr-dark);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--clr-dark);
+  color: var(--clr-white);
+}
+
+/* ===================== PAGAMENTO ===================== */
+
+.pagamento-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pagamento-opcao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--clr-border);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.pagamento-opcao:has(input:checked) {
+  border-color: var(--clr-dark);
+}
+
+.pagamento-opcao input[type="radio"] {
+  accent-color: var(--clr-dark);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.pagamento-opcao-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--clr-dark);
+}
+
+.cartao-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+/* ===================== RESUMO ===================== */
+
+.checkout-resumo-col {
+  position: relative;
+}
+
+.checkout-resumo {
+  position: sticky;
+  top: 88px;
+  background: var(--clr-white);
+  padding: 32px;
+  border: 1px solid var(--clr-border);
+}
+
+.checkout-resumo-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--clr-dark);
+  margin-bottom: 24px;
+}
+
+.checkout-resumo-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-item img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.checkout-item div {
+  flex: 1;
+  min-width: 0;
+}
+
+.checkout-item-nome {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--clr-dark);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checkout-item-qty {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--clr-muted);
+  display: block;
+}
+
+.checkout-item-preco {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-dark);
+  flex-shrink: 0;
+}
+
+.checkout-resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--clr-dark);
+}
+
+.checkout-resumo-total {
+  border-top: 1px solid var(--clr-border);
+  margin-top: 8px;
+  padding-top: 16px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.checkout-resumo-frete-info {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: var(--clr-muted);
+  margin-top: 16px;
+}
+
+/* ===================== CONFIRMAÇÃO ===================== */
+
+.confirmacao-inner {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.confirmacao-icone {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--clr-gold);
+  color: var(--clr-white);
+  font-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.confirmacao-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--clr-dark);
+  margin-bottom: 8px;
+}
+
+.confirmacao-numero {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-muted);
+  margin-bottom: 16px;
+}
+
+.confirmacao-texto {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--clr-muted);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===================== FOOTER SIMPLIFICADO ===================== */
+
+.checkout-footer {
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid var(--clr-border);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--clr-muted);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 767px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .checkout-resumo-col {
+    order: -1;
+  }
+
+  .checkout-resumo {
+    position: static;
+  }
+
+  .checkout-page {
+    padding: 32px 16px;
+  }
+
+  .checkout-etapa-title {
+    font-size: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grupo-cep {
+    max-width: none;
+  }
+
+  .checkout-nav-btns {
+    flex-direction: column;
+  }
+
+  .checkout-nav-btns .btn-secondary,
+  .checkout-nav-btns .btn-primary {
+    width: 100%;
+  }
+
+  .checkout-avancar {
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .checkout-layout {
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+  }
+}

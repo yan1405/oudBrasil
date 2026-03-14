@@ -184,6 +184,14 @@
       if (e.key === 'Escape') closeCartDrawer();
     });
 
+    // Checkout button redirects to checkout page
+    var checkoutBtn = document.querySelector('.cart-checkout-btn');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', function () {
+        window.location.href = 'checkout.html';
+      });
+    }
+
     // Initial badge update
     updateCartBadge();
   });

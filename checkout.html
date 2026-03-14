@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Oud Brasil</title>
+  <meta name="description" content="Finalize sua compra na Oud Brasil." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR SIMPLIFICADA -->
+  <nav class="checkout-navbar">
+    <a href="index.html" class="nav-logo">Oud Brasil</a>
+  </nav>
+
+  <main class="checkout-page">
+    <div class="checkout-layout">
+
+      <!-- Coluna esquerda: formulário -->
+      <div class="checkout-form-col">
+
+        <!-- Etapas -->
+        <div class="checkout-steps">
+          <span class="checkout-step active">1. Entrega</span>
+          <span class="checkout-step-divider">&rsaquo;</span>
+          <span class="checkout-step">2. Pagamento</span>
+          <span class="checkout-step-divider">&rsaquo;</span>
+          <span class="checkout-step">3. Confirmação</span>
+        </div>
+
+        <!-- Etapa 1: Entrega -->
+        <div class="checkout-etapa active" id="etapa-entrega">
+          <h2 class="checkout-etapa-title">Endereço de entrega</h2>
+          <div class="checkout-form">
+            <div class="form-row">
+              <div class="form-grupo">
+                <label class="form-label">Nome completo</label>
+                <input type="text" class="form-input" placeholder="Seu nome completo" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">CPF</label>
+                <input type="text" class="form-input" placeholder="000.000.000-00" maxlength="14" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-grupo">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-input" placeholder="seu@email.com" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Telefone</label>
+                <input type="tel" class="form-input" placeholder="(11) 99999-9999" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-grupo form-grupo-cep">
+                <label class="form-label">CEP</label>
+                <input type="text" class="form-input" id="checkout-cep" placeholder="00000-000" maxlength="9" />
+              </div>
+              <div class="form-grupo form-grupo-grow">
+                <label class="form-label">Endereço</label>
+                <input type="text" class="form-input" id="checkout-endereco" placeholder="Rua, Avenida..." />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-grupo">
+                <label class="form-label">Número</label>
+                <input type="text" class="form-input" placeholder="123" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Complemento</label>
+                <input type="text" class="form-input" placeholder="Apto, Bloco..." />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Bairro</label>
+                <input type="text" class="form-input" id="checkout-bairro" placeholder="Bairro" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-grupo form-grupo-grow">
+                <label class="form-label">Cidade</label>
+                <input type="text" class="form-input" id="checkout-cidade" placeholder="Cidade" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Estado</label>
+                <input type="text" class="form-input" id="checkout-estado" placeholder="SP" maxlength="2" />
+              </div>
+            </div>
+            <button class="btn-primary checkout-avancar" id="btn-avancar-pagamento">Continuar para pagamento</button>
+          </div>
+        </div>
+
+        <!-- Etapa 2: Pagamento -->
+        <div class="checkout-etapa" id="etapa-pagamento">
+          <h2 class="checkout-etapa-title">Forma de pagamento</h2>
+          <div class="pagamento-opcoes">
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="cartao" checked />
+              <span class="pagamento-opcao-label">Cartão de crédito</span>
+            </label>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="pix" />
+              <span class="pagamento-opcao-label">PIX — 5% de desconto</span>
+            </label>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="boleto" />
+              <span class="pagamento-opcao-label">Boleto bancário</span>
+            </label>
+          </div>
+          <div class="cartao-form" id="cartao-form">
+            <div class="form-grupo">
+              <label class="form-label">Número do cartão</label>
+              <input type="text" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" />
+            </div>
+            <div class="form-grupo">
+              <label class="form-label">Nome no cartão</label>
+              <input type="text" class="form-input" placeholder="Como está no cartão" />
+            </div>
+            <div class="form-row">
+              <div class="form-grupo">
+                <label class="form-label">Validade</label>
+                <input type="text" class="form-input" placeholder="MM/AA" maxlength="5" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">CVV</label>
+                <input type="text" class="form-input" placeholder="000" maxlength="3" />
+              </div>
+              <div class="form-grupo">
+                <label class="form-label">Parcelas</label>
+                <select class="form-input">
+                  <option>1x sem juros</option>
+                  <option>2x sem juros</option>
+                  <option>3x sem juros</option>
+                  <option>6x sem juros</option>
+                  <option>12x com juros</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-nav-btns">
+            <button class="btn-secondary" id="btn-voltar-entrega">&larr; Voltar</button>
+            <button class="btn-primary" id="btn-finalizar">Finalizar pedido</button>
+          </div>
+        </div>
+
+        <!-- Etapa 3: Confirmação -->
+        <div class="checkout-etapa" id="etapa-confirmacao">
+          <div class="confirmacao-inner">
+            <div class="confirmacao-icone">&#10003;</div>
+            <h2 class="confirmacao-titulo">Pedido confirmado</h2>
+            <p class="confirmacao-numero">Pedido #OB-2024-<span id="confirmacao-numero">003</span></p>
+            <p class="confirmacao-texto">Você receberá um e-mail com os detalhes e o código de rastreamento assim que o pedido for despachado.</p>
+            <a href="index.html" class="btn-primary" style="display:inline-block; margin-top: 32px;">Continuar comprando</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coluna direita: resumo do pedido -->
+      <div class="checkout-resumo-col">
+        <div class="checkout-resumo">
+          <h3 class="checkout-resumo-title">Resumo do pedido</h3>
+          <div class="checkout-resumo-itens" id="checkout-itens"></div>
+          <div class="checkout-resumo-linha">
+            <span>Subtotal</span>
+            <span id="checkout-subtotal">R$ 0,00</span>
+          </div>
+          <div class="checkout-resumo-linha">
+            <span>Frete</span>
+            <span id="checkout-frete">Grátis</span>
+          </div>
+          <div class="checkout-resumo-linha checkout-resumo-total">
+            <span>Total</span>
+            <span id="checkout-total">R$ 0,00</span>
+          </div>
+          <p class="checkout-resumo-frete-info">Frete grátis para compras acima de R$ 299</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer simplificado -->
+  <footer class="checkout-footer">
+    <p>&copy; 2024 Oud Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/checkout.js"></script>
+
+</body>
+
+</html>
