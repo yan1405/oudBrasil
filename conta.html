@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre Nós — Oud Brasil</title>
+  <title>Minha Conta — Oud Brasil</title>
   <meta name="description"
-    content="Conheça a história do Oud Brasil: curadoria de perfumaria árabe e importada com autenticidade e experiência de luxo." />
+    content="Entre na sua conta ou crie uma nova para acessar seus pedidos e favoritos no Oud Brasil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/pages/sobre.css">
+  <link rel="stylesheet" href="css/pages/conta.css">
 </head>
 
 <body>
@@ -24,17 +24,12 @@
   <!-- SEÇÃO: NAVBAR -->
   <nav id="navbar" role="navigation" aria-label="Navegação principal">
     <div class="nav-inner">
-      <!-- Logo -->
       <a href="index.html" class="nav-logo" aria-label="Oud Brasil - Página inicial">Oud Brasil</a>
-
-      <!-- Links Centrais -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#arabes">Árabes</a></li>
-        <li><a href="index.html#importados">Importados</a></li>
-        <li><a href="index.html#sonobrasil">Só no Brasil</a></li>
+        <li><a href="arabes.html">Árabes</a></li>
+        <li><a href="importados.html">Importados</a></li>
+        <li><a href="sonobrasil.html">Só no Brasil</a></li>
       </ul>
-
-      <!-- Ícones -->
       <div class="nav-icons">
         <button aria-label="Buscar" id="search-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -71,96 +66,60 @@
     </div>
   </nav>
 
-  <!-- Hero Sobre -->
-  <section class="sobre-hero">
+  <!-- SEÇÃO: CONTA (LOGIN / CADASTRO) -->
+  <section class="conta-page">
     <div class="container">
-      <div class="sobre-hero-inner">
-        <p class="section-eyebrow">Nossa história</p>
-        <h1 class="sobre-hero-title">Perfumes raros não deveriam ser exclusividade de quem mora em capitais europeias.</h1>
-        <p class="sobre-hero-subtitulo">O Oud Brasil nasceu para democratizar o acesso à alta perfumaria árabe e às grandes casas internacionais, sem abrir mão de autenticidade, curadoria e experiência de luxo.</p>
-      </div>
-    </div>
-  </section>
+      <div class="conta-inner">
 
-  <!-- Missão -->
-  <section class="sobre-missao">
-    <div class="container">
-      <div class="sobre-missao-grid">
-        <div class="sobre-missao-texto">
-          <p class="section-eyebrow">Nossa missão</p>
-          <h2 class="sobre-missao-titulo">Curadoria com propósito</h2>
-          <p class="sobre-missao-body">Não vendemos todos os perfumes do mundo. Selecionamos os que acreditamos ser excepcionais: ouds raros do Oriente Médio, attars centenários da Índia, e as criações das casas que estão redefinindo a perfumaria contemporânea.</p>
-          <p class="sobre-missao-body">Cada produto no nosso catálogo passou por um processo rigoroso de curadoria. Se está aqui, é porque acreditamos genuinamente no que ele representa.</p>
+        <!-- Tabs login/cadastro -->
+        <div class="conta-tabs">
+          <button class="conta-tab active" data-tab="login">Entrar</button>
+          <button class="conta-tab" data-tab="cadastro">Criar conta</button>
         </div>
-        <div class="sobre-missao-imagem">
-          <img src="https://picsum.photos/seed/missao/600/700" alt="Curadoria Oud Brasil" />
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Marcos -->
-  <section class="sobre-marcos">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Nossa trajetória</p>
-        <h2 class="section-title">De uma paixão a uma curadoria</h2>
-      </div>
-      <div class="marcos-timeline">
-        <div class="marco-item">
-          <span class="marco-ano">2021</span>
-          <div class="marco-linha"></div>
-          <div class="marco-conteudo">
-            <h3 class="marco-titulo">O início</h3>
-            <p class="marco-texto">Tudo começou com uma viagem aos Emirados Árabes e um frasco de oud que mudou a forma de ver perfumaria. A partir daí, uma obsessão: trazer essa experiência para o Brasil.</p>
+        <!-- Login -->
+        <div class="conta-form-wrap active" id="form-login">
+          <h1 class="conta-title">Bem-vindo de volta</h1>
+          <p class="conta-subtitle">Entre na sua conta para acessar seus pedidos e favoritos.</p>
+          <div class="conta-form">
+            <div class="form-grupo">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-input" placeholder="seu@email.com" />
+            </div>
+            <div class="form-grupo">
+              <label class="form-label">Senha</label>
+              <input type="password" class="form-input" placeholder="Sua senha" />
+            </div>
+            <button class="btn-primary conta-submit">Entrar</button>
+            <button class="conta-esqueci">Esqueci minha senha</button>
           </div>
         </div>
-        <div class="marco-item">
-          <span class="marco-ano">2022</span>
-          <div class="marco-linha"></div>
-          <div class="marco-conteudo">
-            <h3 class="marco-titulo">Primeiras parcerias</h3>
-            <p class="marco-texto">Estabelecemos relações diretas com fornecedores no Omã, Arábia Saudita e Emirados. Cada parceiro foi visitado pessoalmente antes de qualquer acordo.</p>
-          </div>
-        </div>
-        <div class="marco-item">
-          <span class="marco-ano">2023</span>
-          <div class="marco-linha"></div>
-          <div class="marco-conteudo">
-            <h3 class="marco-titulo">Importados premium</h3>
-            <p class="marco-texto">Expandimos o catálogo para incluir as maiores casas de perfumaria do mundo: Amouage, Maison Francis Kurkdjian, Xerjoff e Tom Ford, com distribuição oficial no Brasil.</p>
-          </div>
-        </div>
-        <div class="marco-item">
-          <span class="marco-ano">2024</span>
-          <div class="marco-linha"></div>
-          <div class="marco-conteudo">
-            <h3 class="marco-titulo">Só no Brasil</h3>
-            <p class="marco-texto">Lançamos nossa linha de fragrâncias nacionais exclusivas, criadas por perfumistas brasileiros com ingredientes da biodiversidade do país. Uma ponte entre o Brasil e o mundo árabe.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Manifesto -->
-  <section class="sobre-manifesto">
-    <div class="container">
-      <div class="sobre-manifesto-inner">
-        <p class="section-eyebrow">Nosso manifesto</p>
-        <blockquote class="sobre-manifesto-frase">
-          "Acreditamos que um frasco extraordinário merece uma história extraordinária. E que essa história deve chegar a qualquer cidade do Brasil."
-        </blockquote>
-      </div>
-    </div>
-  </section>
+        <!-- Cadastro -->
+        <div class="conta-form-wrap" id="form-cadastro">
+          <h1 class="conta-title">Criar conta</h1>
+          <p class="conta-subtitle">Junte-se ao Clube Oud Brasil e ganhe 10% off na primeira compra.</p>
+          <div class="conta-form">
+            <div class="form-grupo">
+              <label class="form-label">Nome completo</label>
+              <input type="text" class="form-input" placeholder="Seu nome" />
+            </div>
+            <div class="form-grupo">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-input" placeholder="seu@email.com" />
+            </div>
+            <div class="form-grupo">
+              <label class="form-label">Senha</label>
+              <input type="password" class="form-input" placeholder="Mínimo 8 caracteres" />
+            </div>
+            <div class="form-grupo">
+              <label class="form-label">CEP</label>
+              <input type="text" class="form-input" placeholder="00000-000" maxlength="9" />
+            </div>
+            <button class="btn-primary conta-submit">Criar conta</button>
+          </div>
+        </div>
 
-  <!-- CTA final -->
-  <section class="sobre-cta">
-    <div class="container">
-      <div class="sobre-cta-inner">
-        <h2 class="sobre-cta-titulo">Pronto para descobrir sua próxima fragrância?</h2>
-        <a href="index.html" class="btn-primary">Explorar o catálogo</a>
       </div>
     </div>
   </section>
@@ -170,13 +129,11 @@
     <div class="container">
       <div class="footer-top">
 
-        <!-- Marca -->
         <div>
           <div class="footer-brand-logo">Oud Brasil</div>
           <p class="footer-tagline">O Brasil tem seu próprio luxo.<br />Perfumaria árabe, importada e exclusividades
             nacionais.</p>
           <div class="footer-social">
-            <!-- Instagram -->
             <a href="#" aria-label="Instagram">
               <svg viewBox="0 0 24 24">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -184,7 +141,6 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <!-- WhatsApp -->
             <a href="#" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24">
                 <path
@@ -194,17 +150,15 @@
           </div>
         </div>
 
-        <!-- Coleções -->
         <div class="footer-col">
           <p class="footer-col-title">Coleções</p>
           <ul>
-            <li><a href="index.html#arabes">Árabes</a></li>
-            <li><a href="index.html#importados">Importados</a></li>
-            <li><a href="index.html#sonobrasil">Só no Brasil</a></li>
+            <li><a href="arabes.html">Árabes</a></li>
+            <li><a href="importados.html">Importados</a></li>
+            <li><a href="sonobrasil.html">Só no Brasil</a></li>
           </ul>
         </div>
 
-        <!-- Famílias -->
         <div class="footer-col">
           <p class="footer-col-title">Famílias</p>
           <ul>
@@ -217,7 +171,6 @@
           </ul>
         </div>
 
-        <!-- Institucional -->
         <div class="footer-col">
           <p class="footer-col-title">Institucional</p>
           <ul>
@@ -279,6 +232,7 @@
   <script src="js/cart.js"></script>
   <script src="js/favorites.js"></script>
   <script src="js/search.js"></script>
+  <script src="js/conta.js"></script>
 </body>
 
 </html>

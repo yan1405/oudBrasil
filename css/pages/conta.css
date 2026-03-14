@@ -1,0 +1,193 @@
+/* ===================== PÁGINA CONTA ===================== */
+
+.conta-page {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.conta-inner {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- Tabs ---------- */
+
+.conta-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 40px;
+}
+
+.conta-tab {
+  flex: 1;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.conta-tab:hover {
+  color: var(--clr-dark);
+}
+
+.conta-tab.active {
+  color: var(--clr-dark);
+  border-bottom-color: var(--clr-gold);
+}
+
+/* ---------- Form wrap (toggle) ---------- */
+
+.conta-form-wrap {
+  display: none;
+}
+
+.conta-form-wrap.active {
+  display: block;
+  animation: contaFadeIn 0.35s ease;
+}
+
+@keyframes contaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Títulos ---------- */
+
+.conta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--clr-dark);
+  margin-bottom: 8px;
+}
+
+.conta-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--clr-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ---------- Formulário ---------- */
+
+.conta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-dark);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: 0;
+  background: var(--clr-white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--clr-dark);
+  transition: border-color 0.3s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: var(--clr-muted);
+  font-size: 13px;
+}
+
+.form-input:focus {
+  border-color: var(--clr-dark);
+}
+
+/* ---------- Botão submit ---------- */
+
+.conta-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--clr-dark);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.conta-submit:hover {
+  background: #2C2C2C;
+}
+
+/* ---------- Esqueci senha ---------- */
+
+.conta-esqueci {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--clr-muted);
+  cursor: pointer;
+  padding: 0;
+  align-self: center;
+  transition: color 0.3s;
+}
+
+.conta-esqueci:hover {
+  color: var(--clr-dark);
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 600px) {
+  .conta-page {
+    padding: 100px 24px 60px;
+  }
+
+  .conta-title {
+    font-size: 26px;
+  }
+
+  .conta-tabs {
+    margin-bottom: 32px;
+  }
+}
