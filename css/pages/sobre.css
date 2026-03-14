@@ -134,6 +134,11 @@
   .marcos-timeline { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 767px) {
+  .sobre-hero { padding: 104px 0 64px; }
+  .sobre-missao { padding: 64px 0; }
   .sobre-missao-grid { grid-template-columns: 1fr; gap: 40px; }
+  .sobre-marcos { padding: 64px 0; }
   .marcos-timeline { grid-template-columns: 1fr; }
+  .sobre-manifesto { padding: 64px 0; }
+  .sobre-cta { padding: 64px 0; }
 }

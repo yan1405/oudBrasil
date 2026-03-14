@@ -32,8 +32,8 @@
 .familia-icon svg { width: 40px; height: 40px; stroke: var(--clr-dark); fill: none; stroke-width: 1.2; transition: stroke 0.3s; }
 .familia-card:hover .familia-icon svg { stroke: var(--clr-gold); }
 .familia-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clr-dark); }
-@media (max-width: 767px) { .familias-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 480px) { .familias-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1023px) { .familias-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 767px) { .familias-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ===================== GIFT SETS ===================== */
 #giftsets {
@@ -545,6 +545,7 @@
   .newsletter-input {
     border-right: 1px solid rgba(255,255,255,0.2);
     border-bottom: none;
+    font-size: 16px;
   }
   .newsletter-btn {
     padding: 16px;
